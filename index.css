@@ -1,0 +1,40 @@
+:root {
+    --main-bg-color: rgb(241, 238, 238);
+    --nav-font-color: white;
+    --nav-bg-color: rgb(218, 211, 211);
+}
+
+html {
+    font-size: 16px;
+}
+
+/* Navigation */
+nav ul {
+    text-align: center;
+    display: inline-flex;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    background-color: var(--nav-bg-color);
+    min-width: 740px;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: var(--nav-font-color);
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid green;
+}
+
+a .nav-logo {
+    display: flex;
+    float: left;
+}
+
+a .nav-item {
+    display: flex;
+    float: right;
+    margin-left: 20px;
+}

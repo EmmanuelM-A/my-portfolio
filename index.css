@@ -2,6 +2,10 @@
     --main-bg-color: rgb(241, 238, 238);
     --nav-font-color: white;
     --nav-bg-color: rgba(236, 232, 232, 0.897);
+    --page-width: 100%;
+    --page-min-width: 750px;
+    --main-section-width: 80%;
+
 }
 
 html {
@@ -18,8 +22,8 @@ html {
     background-color: var(--nav-bg-color);
     padding: 0;
     margin: 0;
-    width: 100%;
-    min-width: 750px;
+    width: var(--page-width);
+    min-width: var(--page-min-width);
 }
 
 #nav a {
@@ -32,7 +36,20 @@ html {
     float: left;
 }
 
+.nav-items-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .nav-item {
     float: right;
     margin-left: 10px;
+}
+
+/* Home */
+#home {
+    border: 2px solid green;
+    display: flex;
+    margin: auto;
+    width: var(--main-section-width);
 }

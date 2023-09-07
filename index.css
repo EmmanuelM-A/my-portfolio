@@ -15,6 +15,11 @@ html {
     font-size: 16px;
 }
 
+/* General CSS*/
+.border {
+    border: 2px solid green;
+}
+
 /* Navigation */
 #nav {
     text-align: center;
@@ -61,7 +66,6 @@ html {
 .jumborton {
     width: var(--main-section-width);
     padding: 48px 12px;
-    border: 2px solid green;
     border-radius: 8px;
     /*background-color: var(--jumborton-bg-color);*/
 }
@@ -70,4 +74,19 @@ html {
     margin: 10px;
     display: inline-block;
     border: 2px solid red;
+}
+
+/* Projects */
+#projects {
+    /*border: 2px solid green;*/
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+}
+
+/* Contact Me */
+#contact {
+    /*border: 2px solid green;*/
+    margin: auto;
+    margin-top: 30px;
 }

@@ -2,9 +2,12 @@
     --main-bg-color: rgb(241, 238, 238);
     --nav-font-color: white;
     --nav-bg-color: rgba(236, 232, 232, 0.897);
+
     --page-width: 100%;
     --page-min-width: 750px;
+
     --main-section-width: 80%;
+    --jumborton-bg-color: rgb(180, 176, 176);
 
 }
 
@@ -21,7 +24,7 @@ html {
     font-size: 1.3rem;
     background-color: var(--nav-bg-color);
     padding: 0;
-    margin: 0;
+    margin-bottom: 20px;
     width: var(--page-width);
     min-width: var(--page-min-width);
 }
@@ -48,8 +51,23 @@ html {
 
 /* Home */
 #home {
-    border: 2px solid green;
+    display: flex;
+    justify-content: center;
+    /*border: 2px solid green;*/
     display: flex;
     margin: auto;
+}
+
+.jumborton {
     width: var(--main-section-width);
+    padding: 48px 12px;
+    border: 2px solid green;
+    border-radius: 8px;
+    /*background-color: var(--jumborton-bg-color);*/
+}
+
+.jumborton .col {
+    margin: 10px;
+    display: inline-block;
+    border: 2px solid red;
 }

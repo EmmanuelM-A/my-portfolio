@@ -29,13 +29,25 @@ body {
     list-style-type: none;
     font-family: var(--page-font);
     font-size: 1.3rem;
-    background-color: black;
-    padding: 0;
-    margin-bottom: 20px;
+    padding: 20px 0px 20px 10px;
     width: var(--page-width);
-    /*overflow: hidden;
     position: fixed;
-    top: 0;*/
+    top: 0;
+    left: 0;
+}
+
+nav.sticky {
+    background: #fff;
+    padding: 5px 0px 20px 5px;
+    transition: 0.6s;
+}
+
+nav.sticky > .nav-items-right .nav-item {
+    color: black;
+}
+
+nav.sticky > .nav-logo {
+    color: black;
 }
 
 .nav-items-right a {
@@ -44,7 +56,7 @@ body {
     padding: 10px;
 }
 
-.nav-items-right a:hover {
+.nav-items-right a:hover, .nav-logo:hover {
     color: rgb(236, 21, 21);
 }
 
@@ -54,10 +66,6 @@ body {
     padding: 10px;
     float: left;
     transition: 0.6s;
-}
-
-.nav-logo:hover {
-    color: rgb(236, 21, 21);
 }
 
 .nav-items-right {
@@ -139,11 +147,12 @@ body {
     /*border: 2px solid green;*/
     display: flex;
     margin: auto;
+    margin-top: 100px;
 }
 
 .jumborton {
     width: var(--main-section-width);
-    padding: 48px 12px;
+    padding: 10px 12px;
     border-radius: 8px;
     background: var(--jumborton-bg-color);
 }

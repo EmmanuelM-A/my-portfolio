@@ -42,6 +42,10 @@ body {
     padding: 10px;
 }
 
+#nav a:hover {
+    color: rgb(236, 21, 21);
+}
+
 .nav-logo {
     float: left;
 }
@@ -54,6 +58,10 @@ body {
 .nav-item {
     float: right;
     margin-left: 10px;
+}
+
+.dropdown > .nav-item:focus, .nav-item:hover {
+    color: rgb(236, 21, 21);
 }
 
 .dropdown {
@@ -71,6 +79,10 @@ body {
     padding: 10px; /* THIS IS IMPORTANT KEEPS THE MENU BUTTON INLINE WITH THE REST OF NAV-ITEMS*/
 }
 
+.dropdown button:hover {
+    color: rgb(236, 21, 21);
+}
+
 .dropdown-menu {
     background: white;
     position: absolute;
@@ -80,6 +92,7 @@ body {
     border-radius: 0.25rem;
     box-shadow: 0 2px 15px 0 white;
     opacity: 0;
+    pointer-events: none;
     transform: translateY(-10px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
@@ -87,6 +100,7 @@ body {
 .dropdown > .nav-item:focus + .dropdown-menu {
     opacity: 1;
     transform: translateY(0);
+    pointer-events: auto;
 }
 
 /* Home */

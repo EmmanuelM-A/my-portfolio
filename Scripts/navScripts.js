@@ -1,3 +1,4 @@
+// FOR NAV BAR
 document.addEventListener("click", e => {
     const isDropdownButton = e.target.matches("[data-dropdown-button]");
 
@@ -18,6 +19,9 @@ document.addEventListener("click", e => {
         if(dropdown == currentDropdown) return;
         dropdown.classList.remove('active');
     });
+});
 
-
+window.addEventListener("scroll", () => {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("sticky", window.scrollY > 0);
 });

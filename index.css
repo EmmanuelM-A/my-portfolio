@@ -2,6 +2,7 @@
     --main-bg-color: rgb(241, 238, 238);
     --nav-font-color: white;
     --nav-bg-color: rgba(236, 232, 232, 0.897);
+    --nav-link-color: rgb(236, 21, 21);
 
     --page-width: 100%;
     --page-min-width: 750px;
@@ -9,6 +10,8 @@
 
     --main-section-width: 80%;
     --jumborton-bg-color: rgb(0, 0, 0);
+
+    --onChange-color: var(--nav-link-color);
 
 }
 
@@ -50,6 +53,14 @@ nav.sticky > .nav-logo {
     color: black;
 }
 
+nav.sticky > .nav-items-right .nav-item:hover {
+    color: var(--nav-link-color);
+}
+
+nav.sticky > .nav-logo:hover {
+    color: var(--nav-link-color);
+}
+
 .nav-items-right a {
     color: var(--nav-font-color);
     text-decoration: none;
@@ -57,7 +68,7 @@ nav.sticky > .nav-logo {
 }
 
 .nav-items-right a:hover, .nav-logo:hover {
-    color: rgb(236, 21, 21);
+    color: var(--nav-link-color);
 }
 
 .nav-logo {
@@ -80,7 +91,7 @@ nav.sticky > .nav-logo {
 }
 
 .dropdown.active > .nav-item, .nav-item:hover {
-    color: rgb(236, 21, 21);
+    color: var(--nav-link-color);
 }
 
 .dropdown {
@@ -101,7 +112,7 @@ nav.sticky > .nav-logo {
 }
 
 .dropdown button:hover {
-    color: rgb(236, 21, 21);
+    color: var(--nav-link-color);
 }
 
 .dropdown-menu {
@@ -194,7 +205,7 @@ nav.sticky > .nav-logo {
     border: 0;
     outline: 0;
     background: 0;
-    color: rgb(236, 21, 21);
+    color: var(--onChange-color);
     font-size: 1.05rem;
     font-weight: bold;
     font-family: var(--page-font);

@@ -5,6 +5,7 @@
 
     --page-width: 100%;
     --page-min-width: 750px;
+    --page-font: Arial, Helvetica, sans-serif;
 
     --main-section-width: 80%;
     --jumborton-bg-color: rgb(0, 0, 0);
@@ -26,7 +27,7 @@ body {
     text-align: center;
     display: inline-block;
     list-style-type: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--page-font);
     font-size: 1.3rem;
     /*background-color: var(--nav-bg-color);*/
     padding: 0;
@@ -87,19 +88,50 @@ body {
 }
 
 .about-me {
+    display: inline-flex;
     width: var(--main-section-width);
     padding: 10px;
     border-radius: 8px;
     background: var(--jumborton-bg-color);
 }
+.text {
+    /*border: 2px solid purple;*/
+    padding: 0px 10px 10px 20px;
+}
 
 .description-box {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+}
+
+.change-description-button  {
+    border: 0;
+    outline: 0;
+    background: 0;
+    color: rgb(236, 21, 21);
+    font-size: 1.05rem;
+    font-weight: bold;
+    font-family: var(--page-font);
+    transition: color 0.5s ease-in-out 0s;
+}
+
+.change-description-button:hover {
+    color: white;
 }
 
 .picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
+    width: 240px;
+    height: 300px;
+    /*border: 2px solid purple;*/
+}
+
+.col-am {
+    float: left;
 }
 
 .title {

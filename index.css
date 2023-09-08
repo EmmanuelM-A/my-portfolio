@@ -60,7 +60,7 @@ body {
     margin-left: 10px;
 }
 
-.dropdown > .nav-item:focus, .nav-item:hover {
+.dropdown.active > .nav-item, .nav-item:hover {
     color: rgb(236, 21, 21);
 }
 
@@ -97,7 +97,7 @@ body {
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
 
-.dropdown > .nav-item:focus + .dropdown-menu {
+.dropdown.active > .nav-item + .dropdown-menu {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;

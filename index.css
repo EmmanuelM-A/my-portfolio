@@ -57,8 +57,18 @@ body {
 }
 
 .dropdown {
-    border: 2px solid green;
     position: relative;
+}
+
+.dropdown button {
+    outline: 0;
+    border: 0;
+    background: 0;
+    color: var(--nav-font-color);
+    font-family: var(--page-font);
+    font-size: 1.3rem;
+    align-items: center;
+    padding: 10px; /* THIS IS IMPORTANT KEEPS THE MENU BUTTON INLINE WITH THE REST OF NAV-ITEMS*/
 }
 
 .dropdown-menu {

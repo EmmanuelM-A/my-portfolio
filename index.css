@@ -113,7 +113,7 @@ body {
     font-size: 1.05rem;
     font-weight: bold;
     font-family: var(--page-font);
-    transition: color 0.5s ease-in-out 0s;
+    /*transition: color 0.5s ease-in-out 0s;*/
 }
 
 .change-description-button:hover {
@@ -147,10 +147,40 @@ body {
 
 /* Projects */
 #projects {
-    /*border: 2px solid green;*/
+    display: flex;
+    justify-content: center;
     display: flex;
     margin: auto;
     margin-top: 30px;
+}
+
+.projects-container {
+    border: 2px solid green;
+    width: 80%;
+}
+
+.display-projects {
+    display: flex;
+    justify-content: center;
+}
+
+.project-cards-container {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.project-card {
+    color: white;
+    font-size: 1.2rem;
+    font-family: var(--page-font);
+    font-weight: 550;
+    display: inline-block;
+    border: 2px solid purple;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    padding: 5px;
 }
 
 /* Contact Me */
@@ -158,4 +188,5 @@ body {
     /*border: 2px solid green;*/
     margin: auto;
     margin-top: 30px;
+    float: left;
 }

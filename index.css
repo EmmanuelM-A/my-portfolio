@@ -56,6 +56,29 @@ body {
     margin-left: 10px;
 }
 
+.dropdown {
+    border: 2px solid green;
+    position: relative;
+}
+
+.dropdown-menu {
+    background: white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 15px 0 white;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown > .nav-item:focus + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Home */
 #home {
     display: flex;

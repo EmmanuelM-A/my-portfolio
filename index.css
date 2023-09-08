@@ -176,11 +176,47 @@ body {
     font-family: var(--page-font);
     font-weight: 550;
     display: inline-block;
+    text-align: center;
     border: 2px solid purple;
     width: 200px;
     height: 200px;
     margin: 10px;
     padding: 5px;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.project-description {
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 5px;
+}
+
+.project-description p {
+    margin: 0;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+}
+
+.show-more-button {
+    color: white;
+    font-size: 1.2rem;
+    font-family: var(--page-font);
+    font-weight: 550;
+    border: 0;
+    outline: 0;
+    background: 0;
+}
+
+.show-more-button:hover {
+    color: rgb(175, 43, 43);
 }
 
 /* Contact Me */

@@ -160,13 +160,7 @@ body {
 }
 
 .display-projects {
-    display: flex;
-    justify-content: center;
-}
-
-.project-cards-container {
     display: block;
-    position: relative;
     text-align: center;
 }
 
@@ -176,6 +170,7 @@ body {
     font-family: var(--page-font);
     font-weight: 550;
     display: inline-block;
+    vertical-align: top;
     text-align: center;
     border: 2px solid purple;
     width: 200px;

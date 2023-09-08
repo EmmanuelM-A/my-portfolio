@@ -13,6 +13,9 @@
 
     --onChange-color: var(--nav-link-color);
 
+    --about-me-width-picture: 350px;
+    --about-me-height-picture: var(--about-me-width-picture);
+
 }
 
 html {
@@ -122,7 +125,7 @@ nav.sticky > .nav-logo:hover {
 .dropdown-menu {
     background: black;
     position: absolute;
-    width: 130px;
+    width: 140px;
     text-align: center;
     top: 100%;
     right: 0;
@@ -181,28 +184,50 @@ nav.sticky > .nav-logo:hover {
 #about {
     display: flex;
     justify-content: center;
-    /*border: 2px solid green;*/
-    display: flex;
     margin: auto;
     margin-top: 70px;
+    /*border: 2px solid green;*/
 }
 
 .about-me {
-    display: inline-flex;
+    display: block;
+    text-align: center;
     width: var(--main-section-width);
     padding: 10px;
     border-radius: 8px;
     background: var(--jumborton-bg-color);
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .text {
-    /*border: 2px solid purple;*/
-    padding: 0px 10px 10px 20px;
+    text-align: left;
+    padding: 10px;
+    width: auto;
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    max-width: var(--about-me-width-picture);
+    height: var(--about-me-height-picture);
+}
+
+.container > .text, .picture {
+    flex: 200px;
 }
 
 .description-box {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8rem;
+    margin-left: 10px;
 }
 
 .change-description-button  {
@@ -213,25 +238,13 @@ nav.sticky > .nav-logo:hover {
     font-size: 1.05rem;
     font-weight: bold;
     font-family: var(--page-font);
+    margin-left: 10px;
+    padding: 5px 5px 5px 0px;
     /*transition: color 0.5s ease-in-out 0s;*/
 }
 
 .change-description-button:hover {
     color: white;
-}
-
-.picture {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    width: 240px;
-    height: 300px;
-    /*border: 2px solid purple;*/
-}
-
-.col-am {
-    float: left;
 }
 
 .title {
@@ -244,13 +257,23 @@ nav.sticky > .nav-logo:hover {
     color: rgb(238, 29, 29);
 }
 
+/*@media only screen and (max-width: 450px) {
+    .center {
+       text-align: center;
+    }
+
+    .text {
+        width: var(--about-me-width-picture);
+        display: inline-block;
+    }
+}*/
+
 
 
 /* Projects */
 #projects {
     display: flex;
     justify-content: center;
-    display: flex;
     margin: auto;
     margin-top: 70px;
 }

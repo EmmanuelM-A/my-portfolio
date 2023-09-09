@@ -293,7 +293,7 @@ nav.sticky > .nav-logo:hover {
     font-size: 1.2rem;
     font-family: var(--page-font);
     font-weight: 550;
-    display: inline-block;
+    display: none;
     vertical-align: top;
     text-align: center;
     border: 2px solid rgba(231, 37, 37, 0.623);
@@ -302,6 +302,13 @@ nav.sticky > .nav-logo:hover {
     height: 200px;
     margin: 10px;
     padding: 5px;
+}
+
+.project-card:nth-child(1),
+.project-card:nth-child(2),
+.project-card:nth-child(3),
+.project-card:nth-child(4) {
+    display: inline-block;
 }
 
 .project-title {
@@ -333,6 +340,7 @@ nav.sticky > .nav-logo:hover {
     border: 0;
     outline: 0;
     background: 0;
+    margin-top: 20px;
 }
 
 .show-more-button:hover {

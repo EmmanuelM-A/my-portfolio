@@ -257,16 +257,6 @@ nav.sticky > .nav-logo:hover {
     color: rgb(238, 29, 29);
 }
 
-/*@media only screen and (max-width: 450px) {
-    .center {
-       text-align: center;
-    }
-
-    .text {
-        width: var(--about-me-width-picture);
-        display: inline-block;
-    }
-}*/
 
 
 
@@ -345,6 +335,23 @@ nav.sticky > .nav-logo:hover {
 
 #show-more-button:hover {
     color: rgb(175, 43, 43);
+}
+
+#socials {
+    border: 2px solid green;
+}
+
+.socials-container {
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 70px;
+    border: 2px solid blue;
+}
+
+.social-link {
+    display: inline-block;
+    border: 2px solid purple;
 }
 
 /* Contact Me */

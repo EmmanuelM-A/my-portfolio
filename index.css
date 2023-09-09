@@ -337,21 +337,35 @@ nav.sticky > .nav-logo:hover {
     color: rgb(175, 43, 43);
 }
 
+/* Socials */
 #socials {
-    border: 2px solid green;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
 }
 
 .socials-container {
+    width: 80%;
+}
+
+.socials-links-container {
     display: block;
     text-align: center;
     margin: auto;
-    margin-top: 70px;
     border: 2px solid blue;
 }
 
 .social-link {
+    color: white;
     display: inline-block;
     border: 2px solid purple;
+    padding: 10px;
+    margin: 10px;
+}
+
+.social-link img {
+    border: 2px solid yellow;
+    width: 150px;
 }
 
 /* Contact Me */

@@ -371,7 +371,43 @@ nav.sticky > .nav-logo:hover {
 /* Contact Me */
 #contact {
     /*border: 2px solid green;*/
-    margin: auto;
-    margin-top: 30px;
-    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.contact-box {
+    position: relative;
+    width: 80%;
+    padding: 40px 100px;
+}
+
+.form {
+    grid-area: form;
+}
+
+.info {
+    grid-area: info;
+}
+
+.map {
+    grid-area: map;
+}
+
+.contact {
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 35px rgba(255, 255, 255, 0.15);
+}
+
+.contact-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: 
+    "form info"
+    "form map";
+    grid-gap: 20px;
 }

@@ -332,7 +332,7 @@ nav.sticky > .nav-logo:hover {
     justify-content: center;
 }
 
-.show-more-button {
+#show-more-button {
     color: white;
     font-size: 1.2rem;
     font-family: var(--page-font);
@@ -343,7 +343,7 @@ nav.sticky > .nav-logo:hover {
     margin-top: 20px;
 }
 
-.show-more-button:hover {
+#show-more-button:hover {
     color: rgb(175, 43, 43);
 }
 

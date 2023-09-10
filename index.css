@@ -379,7 +379,6 @@ nav.sticky > .nav-logo:hover {
 }
 
 .contact-box {
-    position: relative;
     width: 80%;
     padding: 40px 100px;
 }
@@ -399,7 +398,6 @@ nav.sticky > .nav-logo:hover {
 }
 
 .contact-container {
-    position: relative;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 9fr;
@@ -416,7 +414,6 @@ nav.sticky > .nav-logo:hover {
 }
 
 .formBox {
-    position: relative;
     width: 100%;
 }
 
@@ -476,9 +473,9 @@ nav.sticky > .nav-logo:hover {
 }
 
 /* Contact Info */
-.info {
-    /* background: black; */
-}
+/*.info {
+    background: black;
+}*/
 
 .info h3 {
     color: black;

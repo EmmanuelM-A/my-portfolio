@@ -531,3 +531,32 @@ nav.sticky > .nav-logo:hover {
 .contact-social li a:hover {
     color: red;
 }
+
+@media (max-width: 1060px) {
+    .contact-box {
+        padding: 20px;
+    }
+
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "info"
+        "form";
+    }
+
+    .formBox .row50 {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .inputBox {
+        width: 100%;
+    }
+
+    .contact {
+        padding: 30px;
+    }
+}

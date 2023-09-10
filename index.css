@@ -474,3 +474,60 @@ nav.sticky > .nav-logo:hover {
 .inputBox ::placeholder {
     color: #999;
 }
+
+/* Contact Info */
+.info {
+    /* background: black; */
+}
+
+.info h3 {
+    color: black;
+}
+
+.info .infoBox div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info .infoBox div span {
+    min-width: 40px;
+    height: 40px;
+    color: white;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.info .infoBox div p {
+    color: red;
+    font-size:  1.1rem;
+}
+
+.info .infoBox div a {
+    color: red;
+    text-decoration: none;
+}
+
+.contact-social {
+    margin-top: 40px;
+    display: flex;
+}
+
+.contact-social li {
+    list-style-type: none;
+    margin-right: 15px;
+}
+
+.contact-social li a {
+    font-size: 2rem;
+    color: #ccc;
+}
+
+.contact-social li a:hover {
+    color: red;
+}

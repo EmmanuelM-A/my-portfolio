@@ -19,6 +19,12 @@
 
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-size: 16px;
     scroll-behavior: smooth;
@@ -27,6 +33,7 @@ html {
 
 body {
     background: linear-gradient(180deg, black, rgb(24, 23, 23), rgb(32, 31, 31), rgb(32, 29, 29));
+    position: relative;
 }
 
 /* General CSS*/
@@ -376,7 +383,6 @@ nav.sticky > .nav-logo:hover {
     justify-content: center;
     align-items: center;
     margin-top: 70px;
-    margin-bottom: 150px;
 }
 
 .contact-box {
@@ -561,13 +567,8 @@ nav.sticky > .nav-logo:hover {
 
 /* Footer */
 footer {
-    position: relative;
     background: white;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    margin: 0px;
-    padding: 20px;
+    height: 200px;
     margin-top: 70px;
 }
 
@@ -582,7 +583,7 @@ footer {
 .footer-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 4fr;
+    grid-template-rows: 1fr;
     grid-template-areas: "main quick-links";
 }
 
@@ -612,4 +613,13 @@ footer {
 
 .quick-links ul li a:hover {
     color: red;
+}
+
+@media only screen and (max-width: 630px) {
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "main" "quick-links";
+    }
 }

@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maduka Agbeze Emmanuel | Portfolio</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
-    <script defer src="Scripts/navScripts.js"></script>
-    <script defer src="Scripts/projectsScripts.js"></script>
+    <script defer src="Scripts/scripts.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
@@ -39,10 +38,7 @@
         <div id="home">
             <div class="jumborton">
                 <div class="title">
-                    <h1>
-                        Hi, I'm <span class="highlight">Emmanuel</span>
-                    </h1>
-                    <h1>Maduka Agbeze</h1>
+                    <h1>Hi, I'm <span class="highlight">Emmanuel</span><br>Maduka Agbeze</h1>
                     <h3>Software developer</h3>
                 </div>
 
@@ -59,16 +55,37 @@
                     </div>
                     
                     <div class="text col-am">
-                        <h1 class="title">About Me</h1> 
-                        <div class="description-box row">
+                        <h1 class="about-me-title">About Me</h1> 
+                        <div class="about-me-text row">
                             <p>I'm a harworking, self driven individual whole works well individually or part of a team. I am a good communicator with excellenent planning and coordation skills.</p>           
                         </div>
         
-                        <div class="change-description row">
-                            <button class="change-description-button">Skills</button>
-                            <button class="change-description-button">Experience</button>
-                            <button class="change-description-button">Education</button>
-                            <button class="change-description-button">Work</button>
+                        <div class="change-description">
+                            <button class="change-description-button active-link onClick-skills">Skills</button>
+                            <button class="change-description-button onClick-experience">Experience</button>
+                            <button class="change-description-button onClick-education">Education</button>
+                            <!--<button class="change-description-button onClick-skills">Work</button>-->
+                        </div>
+                        <div class="description active-description" id="skills">
+                            <ul>
+                                <li><span>UI?UX</span><br><p>Something</p></li>
+                                <li><span>UI?UX</span><br><p>Something</p></li>
+                                <li><span>UI?UX</span><br><p>Something</p></li>
+                            </ul>
+                        </div>
+                        <div class="description" id="experience">
+                            <ul>
+                                <li><span>UI?UX</span><br><p>Something</p></li>
+                                <li><span>UI?UX</span><br><p>Something</p></li>
+                                <li><span>UI?UX</span><br><p>Something</p></li>
+                            </ul>
+                        </div>
+                        <div class="description" id="education">
+                            <ul>
+                                <li><span>UI?UX</span><br><p>Something</p></li>
+                                <li><span>UI?UX</span><br><p>Something</p></li>
+                                <li><span>UI?UX</span><br><p>Something</p></li>
+                            </ul>
                         </div>
                     </div>
                 </div>                

@@ -11,10 +11,14 @@
     /*--body-bg-colour: var(--light-mode-colour-one);
     --body-font-colour: var(--light-mode-colour-two);*/
 
+    /* General Variables */
+    --main-colour-one: rgb(236, 21, 21);
+    --main-colour-two: #830029;
+
     --main-bg-color: rgb(241, 238, 238);
     --nav-font-color: white;
     --nav-bg-color: rgba(236, 232, 232, 0.897);
-    --nav-link-color: rgb(236, 21, 21);
+    --nav-link-color: var(--main-colour-one);
     --second-font-color: var(--nav-link-color);
 
     --page-width: 100%;
@@ -71,31 +75,21 @@ nav.sticky {
     transition: 0.6s;
 }
 
-nav.sticky > .nav-items-right .nav-item {
+nav.sticky > .nav-items-right .nav-item, nav.sticky > .nav-logo {
     color: black;
 }
 
-nav.sticky > .nav-logo {
-    color: black;
-}
-
-nav.sticky > .nav-items-right .nav-item:hover {
+nav.sticky > .nav-items-right .nav-item:hover, nav.sticky > .nav-logo:hover, .nav-items-right a:hover, .nav-logo:hover {
     color: var(--nav-link-color);
 }
 
-nav.sticky > .nav-logo:hover {
-    color: var(--nav-link-color);
-}
+
 
 .nav-items-right a {
     color: var(--nav-font-color);
     text-decoration: none;
     padding: 10px;
     margin-right: 10px;
-}
-
-.nav-items-right a:hover, .nav-logo:hover {
-    color: var(--nav-link-color);
 }
 
 .nav-logo {
@@ -179,13 +173,13 @@ nav.sticky > .nav-logo:hover {
     }
 }
 
-/* Home */
+/* ----------------------- Home ----------------------- */
 #home {
     display: flex;
     justify-content: center;
     display: flex;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 250px;
 }
 
 .jumborton {
@@ -196,12 +190,12 @@ nav.sticky > .nav-logo:hover {
 
 .jumborton .title h1 {
     margin-top: 10px;
-    font-size: 2.9rem;
+    font-size: 3.8rem;
 }
 
 .jumborton .title h3 {
     margin-top: 10px;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
 }
 
 .jumborton .col {
@@ -209,7 +203,11 @@ nav.sticky > .nav-logo:hover {
     display: inline-block;
 }
 
-/* About Me */
+.highlight {
+    color: var(--main-colour-one);
+}
+
+/* -------------------------- About Me ------------------------ */
 #about {
     display: flex;
     justify-content: center;
@@ -237,6 +235,12 @@ nav.sticky > .nav-logo:hover {
     width: auto;
 }
 
+.about-me-title {
+    color: var(--dark-mode-colour-two);
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
 .picture {
     display: flex;
     justify-content: center;
@@ -251,28 +255,71 @@ nav.sticky > .nav-logo:hover {
     flex: 200px;
 }
 
-.description-box {
+.about-me-text {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-left: 10px;
+}
+
+.change-description {
+    margin-top: 15px;
 }
 
 .change-description-button  {
     border: 0;
     outline: 0;
     background: 0;
-    color: var(--onChange-color);
-    font-size: 1.05rem;
-    font-weight: bold;
-    font-family: var(--page-font);
+    color: var(--dark-mode-colour-two);
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
     margin-left: 10px;
     padding: 5px 5px 5px 0px;
     /*transition: color 0.5s ease-in-out 0s;*/
 }
 
-.change-description-button:hover {
+.change-description-button::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--main-colour-one);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.change-description-button.active-link::after {
+    width: 50%;
+}
+
+/*.change-description-button:hover {
     color: white;
+}*/
+
+.description {
+    color: var(--dark-mode-colour-two);
+    margin-top: 20px;
+}
+.description ul li {
+    list-style: none;
+    margin: 10px 0 0 10px;
+}
+.description ul li span {
+    color: var(--main-colour-one);
+    font-size: 0.8rem;
+}
+.description ul li p {
+    margin-top: 5px;
+}
+.description {
+    display: none;
+}
+
+.description.active-description {
+    display: block;
 }
 
 .title {
@@ -281,14 +328,9 @@ nav.sticky > .nav-logo:hover {
     margin-left: 10px;
 }
 
-.highlight {
-    color: rgb(238, 29, 29);
-}
 
 
-
-
-/* Projects */
+/* -------------------------- Projects ----------------------- */
 #projects {
     display: flex;
     justify-content: center;

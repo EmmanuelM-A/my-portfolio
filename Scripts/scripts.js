@@ -1,4 +1,4 @@
-// FOR NAV BAR
+// Scripts for nav bar
 document.addEventListener("click", e => {
     const isDropdownButton = e.target.matches("[data-dropdown-button]");
 
@@ -24,4 +24,22 @@ document.addEventListener("click", e => {
 window.addEventListener("scroll", () => {
     const nav = document.querySelector("nav");
     nav.classList.toggle("sticky", window.scrollY > 0);
+});
+
+
+
+
+// Scripts for the show more button in the projects section
+let showMoreBtn = document.querySelector('#show-more-button');
+let currentItems = 3;
+
+showMoreBtn.addEventListener("click", () => {
+    let projectCards = [...document.querySelectorAll('.project-card')];
+    for(let i = currentItems; i < currentItems + 3; i++) {
+        projectCards[i].style.display = 'inline-block';
+    }
+    currentItems += 3;
+    if(currentItems >= projectCards.length) {
+        showMoreBtn.style.display = "none";
+    }
 });

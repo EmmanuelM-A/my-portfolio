@@ -1,4 +1,4 @@
-// Scripts for nav bar
+// ------------------ Scripts for nav bar ----------------------
 document.addEventListener("click", e => {
     const isDropdownButton = e.target.matches("[data-dropdown-button]");
 
@@ -25,11 +25,51 @@ window.addEventListener("scroll", () => {
     const nav = document.querySelector("nav");
     nav.classList.toggle("sticky", window.scrollY > 0);
 });
+// -----------------------------------------------
 
 
 
 
-// Scripts for the show more button in the projects section
+
+// ------------------- Scripts for about me section ---------------------------
+let changeDescriptionBtns = document.querySelectorAll('.change-description-button');
+
+let skillsBtn = document.querySelector('.skillsBtn');
+let experienceBtn = document.querySelector('.experienceBtn');
+let educationBtn = document.querySelector('.educationBtn');
+
+let descriptions = document.querySelectorAll('.description');
+
+function showDescription(event, descriptionToShow) {
+    for(let btn of changeDescriptionBtns) {
+        btn.classList.remove("active-description-link");
+    }
+    for(let btn of descriptions) {
+        btn.classList.remove("active-description");
+    }
+    event.currentTarget.classList.add("active-description-link");
+    document.querySelector(descriptionToShow).classList.add("active-description");
+}
+
+skillsBtn.addEventListener("click", (e) => {
+    showDescription(e, '#skills');
+});
+
+experienceBtn.addEventListener("click", (e) => {
+    showDescription(e, '#experience');
+});
+
+educationBtn.addEventListener("click", (e) => {
+    showDescription(e, '#education');
+});
+
+// ----------------------------------------
+
+
+
+
+
+// ------------------- Scripts for projects section ---------------------------
 let showMoreBtn = document.querySelector('#show-more-button');
 let currentItems = 3;
 
@@ -43,3 +83,4 @@ showMoreBtn.addEventListener("click", () => {
         showMoreBtn.style.display = "none";
     }
 });
+// ----------------------------------------

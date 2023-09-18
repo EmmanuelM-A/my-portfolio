@@ -291,14 +291,9 @@ nav.sticky > .nav-items-right .nav-item:hover, nav.sticky > .nav-logo:hover, .na
     transition: 0.5s;
 }
 
-.change-description-button.active-link::after {
+.change-description-button.active-description-link::after {
     width: 50%;
 }
-
-/*.change-description-button:hover {
-    color: white;
-}*/
-
 .description {
     color: var(--dark-mode-colour-two);
     margin-top: 20px;
@@ -317,7 +312,6 @@ nav.sticky > .nav-items-right .nav-item:hover, nav.sticky > .nav-logo:hover, .na
 .description {
     display: none;
 }
-
 .description.active-description {
     display: block;
 }

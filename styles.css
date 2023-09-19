@@ -540,7 +540,7 @@ nav.sticky .nav-items-right > .nav-item {
     color: #ff004f;
     transform: translateY(-5px);
 }
-.download-CV-btn {
+.btn {
     color: white;
     font-size: 1.2rem;
     font-weight: 550;
@@ -552,180 +552,26 @@ nav.sticky .nav-items-right > .nav-item {
     text-decoration: none;
 }
 
-/*.form {
-    grid-area: form;
-}
-
-.info {
-    grid-area: info;
-}
-
-.contact {
-    padding: 40px;
-    background: #fff;
-    box-shadow: 0 5px 35px rgba(255, 255, 255, 0.15);
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 9fr;
-    grid-template-areas: 
-    "info form";
-    grid-gap: 20px;
-    margin-top: 20px;
-}
-
-.contact h3 {
-    font-weight: 500;
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-.formBox {
+.contact-form form {
     width: 100%;
 }
 
-.formBox .row50  {
-    display: flex;
-    gap: 20px;
-}
-
-.inputBox {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+form input, form textarea {
     width: 100%;
-}
-
-.formBox .row100 .inputBox {
-    width: 100%;
-}
-
-.inputBox span {
-    color: black;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-weight: 500;
-}
-
-.inputBox input {
-    padding: 10px;
-    font-size: 1.1em;
-    outline: none;
-    border: 1px solid #333;
-}
-
-.inputBox textarea {
-    padding: 10px;
-    font-size: 1.1em;
-    outline: none;
-    border: 1px solid #333;
-    resize: none;
-    min-height: 220px;
-    margin-bottom: 10px;
-}
-
-.inputBox button[type="submit"] {
-    background: var(--second-font-color);
-    color: white;
     border: 0;
-    font-size: 1.1rem;
-    max-width: 120px;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 14px 15px;
-}
-
-.inputBox ::placeholder {
-    color: #999;
-}
-
-Contact Info 
-.info {
-    background: black;
-}
-
-.info h3 {
+    outline: 0;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
     color: black;
+    font-size: 18px;
+    border-radius: 6px;
 }
 
-.info .infoBox div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+.submit-form {
+    outline: 0;
+    border: 0;
 }
-
-.info .infoBox div span {
-    min-width: 40px;
-    height: 40px;
-    color: white;
-    background: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.info .infoBox div p {
-    color: red;
-    font-size:  1.1rem;
-}
-
-.info .infoBox div a {
-    color: red;
-    text-decoration: none;
-}
-
-.contact-social {
-    margin-top: 40px;
-    display: flex;
-}
-
-.contact-social li {
-    list-style-type: none;
-    margin-right: 15px;
-}
-
-.contact-social li a {
-    font-size: 2rem;
-    color: #ccc;
-}
-
-.contact-social li a:hover {
-    color: red;
-}
-
-@media (max-width: 1060px) {
-    .contact-box {
-        padding: 20px;
-    }
-
-    .contact-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "info"
-        "form";
-    }
-
-    .formBox .row50 {
-        display: flex;
-        gap: 0;
-        flex-direction: column;
-    }
-
-    .inputBox {
-        width: 100%;
-    }
-
-    .contact {
-        padding: 30px;
-    }
-}*/
 
 /* Footer */
 footer {

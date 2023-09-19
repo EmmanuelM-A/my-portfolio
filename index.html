@@ -6,8 +6,6 @@
     <title>Maduka Agbeze Emmanuel | Portfolio</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
     <script defer src="Scripts/scripts.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/f367fc2241.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -208,16 +206,34 @@
         <!--Contact Me-->
         <div id="contact">
             <div class="contact-box">
-                <h1 class="title">Contact Me</h1>
-                <div class="contact-container">
-                    <!--Form Section-->
+                <h1>Contact Me</h1>
+                <div class="contact-row">
+                    <div class="contact-info">
+                        <p>contact@example.com</p>
+                        <p>0123456789</p>
+                        <div class="contact-icons">
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-brands fa-square-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form>
+                            <input type="text" name="name" placeholder="Enter your name"></input>
+                            <input type="email" name="email" placeholder="Enter your email"></input>
+                            <textarea name="message" rows="6" placeholder="Enter your message"></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <!--<div class="contact-container">
+                    Form Section
                     <div class="contact form">
                         <h3>Send a message</h3>
                         <form>
                             <div class="formBox">
                                 <div class="row50">
                                     <div class="inputBox">
-                                        <span>First Name</span>
+                                        <span>Full Name</span>
                                         <input type="text" placeholder="John">
                                     </div>
                                     <div class="inputBox">
@@ -253,7 +269,7 @@
                         </form>
                     </div>
 
-                    <!--Info Section-->
+                    Info Section
                     <div class="contact info">
                         <h3>Contact Info</h3>
                         <div class="infoBox">
@@ -266,14 +282,14 @@
                                 <a href="tel:+44 07497 486547">+44 07497 486547</a>
                             </div>
     
-                            <!--Social Media Links-->
+                            Social Media Links
                             <ul class="contact-social">
                                 <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
                                 <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </main>

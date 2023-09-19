@@ -360,6 +360,7 @@ nav.sticky .nav-items-right > .nav-item {
     justify-content: center;
     margin: auto;
     margin-top: 70px;
+    /*position: relative;*/
 }
 
 .projects-container {
@@ -432,6 +433,11 @@ nav.sticky .nav-items-right > .nav-item {
     height: 60px;
     border-radius: 50%;
     text-align: center;
+    transition: color 0.3s, background 0.3s;
+}
+.project-content .inline a:hover {
+    color: white;
+    background: #ff004f;
 }
 .project-card:hover img {
     transform: scale(1.1);
@@ -447,18 +453,21 @@ nav.sticky .nav-items-right > .nav-item {
 }
 
 #show-more-button {
-    color: white;
+    color: #ff0022;
     font-size: 1.2rem;
-    font-family: var(--page-font);
     font-weight: 550;
-    border: 0;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 15px;
     outline: 0;
     background: 0;
-    margin-top: 20px;
+    margin-top: 40px;
+    transition: color 0.4s, background 0.4s;
 }
 
 #show-more-button:hover {
-    color: rgb(175, 43, 43);
+    color: white;
+    background: #ff0022;
 }
 
 /* --------------------- Socials -------------------- */

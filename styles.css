@@ -575,12 +575,28 @@ form input, form textarea {
 
 /* Footer */
 footer {
-    background: white;
-    height: 200px;
+    display: flex;
+    background: rgb(31, 30, 30);
+    justify-content: center;
+    height: 100px;
     margin-top: 70px;
 }
 
-.main {
+.footer-container {
+    color: white;
+    text-align: center;
+}
+
+.footer-container .footer-main h1 {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.footer-container .footer-main p {
+    margin-top: 10px;
+}
+
+/*.main {
     grid-area: main;
 }
 
@@ -630,4 +646,4 @@ footer {
         grid-template-rows: auto;
         grid-template-areas: "main" "quick-links";
     }
-}
+}*/

@@ -256,7 +256,6 @@ nav.sticky .nav-items-right > .nav-item {
     width: 100%;
     border-radius: 15px;
 }
-
 .about-col-2 {
     flex-basis: 60%;
 }
@@ -266,26 +265,10 @@ nav.sticky .nav-items-right > .nav-item {
     padding: 10px;
     width: auto;
 }
-
 .about-me-text-title {
     color: var(--dark-mode-colour-two);
     margin-bottom: 15px;
 }
-
-/*.picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding: 10px;
-    max-width: var(--about-me-width-picture);
-    height: var(--about-me-height-picture);
-}*/
-
-/*.container > .text, .picture {
-    flex: 200px;
-}*/
-
 .about-me-text {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -295,7 +278,6 @@ nav.sticky .nav-items-right > .nav-item {
 .change-content {
     margin-top: 15px;
 }
-
 .change-content-button  {
     border: 0;
     outline: 0;
@@ -309,7 +291,6 @@ nav.sticky .nav-items-right > .nav-item {
     padding: 5px 5px 5px 0px;
     /*transition: color 0.5s ease-in-out 0s;*/
 }
-
 .change-content-button::after {
     content: '';
     width: 0;
@@ -360,7 +341,6 @@ nav.sticky .nav-items-right > .nav-item {
     justify-content: center;
     margin: auto;
     margin-top: 70px;
-    /*position: relative;*/
 }
 
 .projects-container {
@@ -456,13 +436,14 @@ nav.sticky .nav-items-right > .nav-item {
     color: #ff0022;
     font-size: 1.2rem;
     font-weight: 550;
-    border: 2px solid white;
+    border: 2px solid #ff0022;
     border-radius: 5px;
     padding: 15px;
     outline: 0;
     background: 0;
     margin-top: 40px;
-    transition: color 0.4s, background 0.4s;
+    transition: color 0.4s;
+    transition: background 0.4s;
 }
 
 #show-more-button:hover {
@@ -480,28 +461,36 @@ nav.sticky .nav-items-right > .nav-item {
 .socials-container {
     width: 80%;
 }
+.socials-container h1 {
+    color: white;
+    font-size: 2.4rem;
+}
 
 .socials-links-container {
     display: block;
-    text-align: center;
+    text-align: left;
     margin: auto;
-    border: 2px solid blue;
 }
-
 .social-link {
     color: white;
     display: inline-block;
-    border: 2px solid purple;
-    padding: 10px;
-    margin: 10px;
+    margin: 30px 40px 30px 0px;
+}
+.social-link a {
+    color: white;
+    font-size: 12rem;
+    line-height: 60px;
+    transition: color 0.5s, transform 0.5s;
+}
+.social-link a:hover {
+    color: #333;
+    transform: translateY(-20px);
+}
+.social-link h4 {
+    text-align: center;
 }
 
-.social-link img {
-    border: 2px solid yellow;
-    width: 150px;
-}
-
-/* Contact Me */
+/* --------------------------- Contact Me ------------------------- */
 #contact {
     /*border: 2px solid green;*/
     display: flex;

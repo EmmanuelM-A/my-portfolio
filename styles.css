@@ -61,7 +61,7 @@ body {
     display: inline-block;
     list-style-type: none;
     font-family: var(--page-font);
-    font-size: 1.3rem;
+    /*font-size: 1.3rem;*/
     padding: 20px 10px 20px 10px;
     width: var(--page-width);
     position: fixed;
@@ -75,26 +75,42 @@ nav.sticky {
     transition: 0.6s;
 }
 
-nav.sticky > .nav-items-right .nav-item, nav.sticky > .nav-logo {
+nav.sticky > .nav-logo {
     color: black;
 }
 
-nav.sticky > .nav-items-right .nav-item:hover, nav.sticky > .nav-logo:hover, .nav-items-right a:hover, .nav-logo:hover {
-    color: var(--nav-link-color);
+nav.sticky .nav-items-right > .nav-item {
+    color: black;
 }
 
-
-
-.nav-items-right a {
-    color: var(--nav-font-color);
+.nav-items-right > .nav-item {
+    color: var(--dark-mode-colour-two);
     text-decoration: none;
-    padding: 10px;
-    margin-right: 10px;
+    font-size: 1.3rem;
+    padding: 10px 2px;
+    margin: 0px 15px;
+    position: relative;
+}
+
+.nav-items-right > .nav-item::after {
+    content: '';
+    width: 0;
+    height: 3px;;
+    background: var(--main-colour-one);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.nav-items-right > .nav-item:hover::after {
+    width: 100%;
 }
 
 .nav-logo {
     color: var(--nav-font-color);
     text-decoration: none;
+    font-size: 1.3rem;
     padding: 10px;
     float: left;
     transition: 0.6s;
@@ -105,13 +121,13 @@ nav.sticky > .nav-items-right .nav-item:hover, nav.sticky > .nav-logo:hover, .na
     justify-content: flex-end;
 }
 
-.nav-item {
+.nav-items-right .nav-item {
     float: right;
     margin-left: 10px;
     transition: 0.6s;
 }
 
-.dropdown.active > .nav-item, .nav-item:hover {
+.dropdown.active > .nav-item {
     color: var(--nav-link-color);
 }
 

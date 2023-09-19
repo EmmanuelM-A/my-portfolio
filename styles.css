@@ -363,7 +363,6 @@ nav.sticky .nav-items-right > .nav-item {
 }
 
 .projects-container {
-    /*border: 2px solid green;*/
     width: 80%;
 }
 
@@ -384,31 +383,18 @@ nav.sticky .nav-items-right > .nav-item {
     position: relative;
     overflow: hidden;
     color: white;
-    /*font-size: 1.2rem;
-    font-family: var(--page-font);
-    font-weight: 550;
-    display: none;
-    vertical-align: top;
-    text-align: center;
-    overflow: hidden;
-    border-radius: 10px;
-    width: 300px;*/
-    /*height: 600px;*/
-    /*margin: 10px;
-    padding: 5px;*/
 }
-
-.project-card img {
-    width: 100%;
-    display: block;
-    border-radius: 10px;
-}
-
 .project-card:nth-child(1),
 .project-card:nth-child(2),
 .project-card:nth-child(3),
 .project-card:nth-child(4) {
-    display: inline-block;
+    display: block;
+}
+.project-card img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.5s;
 }
 
 .project-content {
@@ -419,20 +405,25 @@ nav.sticky .nav-items-right > .nav-item {
     position: absolute;
     left: 0;
     bottom: 0;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
+    transition: height 0.5s;
 }
 .project-content h4 {
     font-size: 1.3rem;
-    font-weight: 700;
+    font-weight: bold;
     margin-bottom: 25px;
 }
-.project-content a {
-    margin-top: 10px;
+.project-content .inline {
+    display: flex;
+}
+.project-content .inline a {
+    margin: 20px 10px 0px 0px;
     color: #ff004f;
     font-size: 1.1rem;
     line-height: 60px;
@@ -441,6 +432,13 @@ nav.sticky .nav-items-right > .nav-item {
     height: 60px;
     border-radius: 50%;
     text-align: center;
+}
+.project-card:hover img {
+    transform: scale(1.1);
+}
+.project-card:hover .project-content {
+    height: 100%;
+    display: flex;
 }
 
 .button-div {

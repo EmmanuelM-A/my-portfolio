@@ -502,9 +502,7 @@ nav.sticky .nav-items-right > .nav-item {
 
 .contact-box {
     width: 80%;
-    padding: 40px 100px;
 }
-
 .contact-box h1 {
     color: white;
     font-size: 2.4rem;
@@ -517,7 +515,42 @@ nav.sticky .nav-items-right > .nav-item {
     flex-basis: 60%;
 }
 .contact-info p {
-    margin-top: 30px
+    margin-top: 30px;
+    font-size: 1.2rem   
+}
+.contact-info p i {
+    color: #830029;
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+.contact-icons {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.contact-icons a {
+    text-decoration: none;
+    font-size: 2.3rem;
+    margin-right: 15px;
+    color: #ccc;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.contact-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.download-CV-btn {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 550;
+    border-radius: 5px;
+    padding: 15px;
+    outline: 0;
+    background: #ff0022;
+    text-decoration: none;
+    transition: color 0.5s;
+    transition: background 0.5s;
 }
 
 /*.form {

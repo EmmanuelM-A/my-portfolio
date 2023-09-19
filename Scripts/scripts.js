@@ -32,23 +32,23 @@ window.addEventListener("scroll", () => {
 
 
 // ------------------- Scripts for about me section ---------------------------
-let changeDescriptionBtns = document.querySelectorAll('.change-description-button');
+let changeDescriptionBtns = document.querySelectorAll('.change-content-button');
 
 let skillsBtn = document.querySelector('.skillsBtn');
 let experienceBtn = document.querySelector('.experienceBtn');
 let educationBtn = document.querySelector('.educationBtn');
 
-let descriptions = document.querySelectorAll('.description');
+let descriptions = document.querySelectorAll('.content');
 
 function showDescription(event, descriptionToShow) {
     for(let btn of changeDescriptionBtns) {
-        btn.classList.remove("active-description-link");
+        btn.classList.remove("active-content-link");
     }
     for(let btn of descriptions) {
-        btn.classList.remove("active-description");
+        btn.classList.remove("active-content");
     }
-    event.currentTarget.classList.add("active-description-link");
-    document.querySelector(descriptionToShow).classList.add("active-description");
+    event.currentTarget.classList.add("active-content-link");
+    document.querySelector(descriptionToShow).classList.add("active-content");
 }
 
 skillsBtn.addEventListener("click", (e) => {

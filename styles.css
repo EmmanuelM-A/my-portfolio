@@ -547,10 +547,9 @@ nav.sticky .nav-items-right > .nav-item {
     border-radius: 5px;
     padding: 15px;
     outline: 0;
+    padding: 15px 40px;
     background: #ff0022;
     text-decoration: none;
-    transition: color 0.5s;
-    transition: background 0.5s;
 }
 
 /*.form {

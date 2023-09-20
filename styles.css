@@ -234,18 +234,13 @@ nav.sticky .nav-items-right .menu-icon:hover {
     display: flex;
     justify-content: center;
     margin: auto;
-    margin-top: 70px;
+    margin: 70px 0;
 }
 
 .about-me {
     text-align: center;
     width: var(--main-section-width);
     padding: 10px;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .row {
@@ -273,11 +268,12 @@ nav.sticky .nav-items-right .menu-icon:hover {
 .about-me-text-title {
     color: var(--dark-mode-colour-two);
     margin-bottom: 15px;
+    font-size: 2.6rem;
 }
 .about-me-text {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .change-content {
@@ -622,4 +618,44 @@ footer {
     .jumborton {
         width: auto;
     }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 .about-me-text {
+        font-size: 1rem;
+    }
+    .about-col-2 .change-content-button {
+        font-size: 1.1rem;
+    }
+
+    .about-col-2 .content {
+        font-size: 1.1rem;
+    }
+
+    .social-link a {
+        font-size: 9rem;
+    }
+
+    .contact-info, .contact-form {
+        flex-basis: 100%;
+    }
+
+    .contact-form {
+        margin-top: 50px;
+    }
+
+    footer .footer-main h1 {
+        font-size: 1.4rem;
+    }
+
+    footer .footer-main p {
+        font-size: 0.9rem;
+    }
+
 }

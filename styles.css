@@ -112,6 +112,9 @@ nav.sticky .nav-items-right > .nav-item {
 nav.sticky .nav-items-right .menu-icon {
     color: black;
 }
+nav.sticky .nav-items-right .menu-icon:hover {
+    color: #ff0022;
+}
 
 .nav-items-right > .nav-item::after {
     content: '';
@@ -156,38 +159,20 @@ nav.sticky .nav-items-right .menu-icon {
     position: relative;
 }
 
-.dropdown button {
-    outline: 0;
-    border: 0;
-    background: 0;
-    cursor: pointer;
-    color: var(--nav-font-color);
-    font-family: var(--page-font);
-    font-size: 1.3rem;
-    align-items: center;
-    padding: 10px; /* THIS IS IMPORTANT KEEPS THE MENU BUTTON INLINE WITH THE REST OF NAV-ITEMS*/
-    margin-right: 10px;
-    display: none;
-}
-
-.dropdown button:hover {
-    color: var(--nav-link-color);
-}
-
 .dropdown-menu {
-    background: black;
+    background: white;
     position: absolute;
-    width: 140px;
+    width: 200px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
     text-align: center;
-    top: 100%;
-    right: 0;
-    padding: 0.75rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 2px 15px 0 rgb(199, 22, 22);
+    top: 138%;
+    right: -10px;
+    padding: 20px;
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-10px);
-    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    transform: translateX(20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .dropdown.active > .nav-item + .dropdown-menu {
@@ -197,7 +182,17 @@ nav.sticky .nav-items-right .menu-icon {
 }
 
 .dropdown-menu > .dropdown-link {
-    color: white;
+    color: black;
+    display: block;
+    font-size: 1.9rem;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 5px;
+    transition: color 0.4s;
+}
+
+.dropdown-menu > .dropdown-link:hover {
+    color: #ff0022;
 }
 
 /* ----------------------- Home ----------------------- */
@@ -616,11 +611,11 @@ footer {
         display: none;
     }
 
-    .nav-items-right .menu-icon {
-        display: block;
+    .nav-logo, nav.sticky > .nav-logo, .nav-items-right .menu-icon, nav.sticky .nav-items-right .menu-icon {
+        font-size: 2.4rem;
     }
 
-    nav.sticky .nav-items-right .menu-icon {
+    .nav-items-right .menu-icon, nav.sticky .nav-items-right .menu-icon {
         display: block;
     }
 

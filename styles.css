@@ -45,7 +45,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 120px;
 }
 
 body {
@@ -54,15 +54,22 @@ body {
     position: relative;
 }
 
-/* General CSS*/
+/* ---------------------- Header -------------------- */
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/Resources/Images/insert-photo.png);
+    background-size: cover;
+    background-position: center;
+}
 
-/* Navigation */
+
+/* ---------------------- Navigation -------------------- */
 #nav {
     text-align: center;
     display: inline-block;
     list-style-type: none;
     font-family: var(--page-font);
-    /*font-size: 1.3rem;*/
     padding: 20px 10px 20px 10px;
     width: var(--page-width);
     position: fixed;

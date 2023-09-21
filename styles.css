@@ -340,7 +340,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
     display: flex;
     justify-content: center;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 100px;
 }
 
 .projects-container {
@@ -455,7 +455,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 #socials {
     display: flex;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 100px;
 }
 
 .socials-container {
@@ -496,7 +496,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 100px;
     color: white;
 }
 
@@ -578,7 +578,8 @@ footer {
     display: flex;
     background: rgb(31, 30, 30);
     justify-content: center;
-    height: 100px;
+    align-items: center;
+    height: 130px;
     margin-top: 70px;
 }
 

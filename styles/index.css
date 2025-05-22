@@ -33,6 +33,10 @@
     --about-me-width-picture: 350px;
     --about-me-height-picture: var(--about-me-width-picture);
 
+
+    /* New Colour variables */
+    --root-font-colour: black;
+
 }
 
 * {
@@ -50,7 +54,7 @@ html {
 
 body {
     /*background: linear-gradient(180deg, black, rgb(24, 23, 23), rgb(32, 31, 31), rgb(32, 29, 29));*/
-    background: black;
+    background: white;
     position: relative;
 }
 
@@ -65,6 +69,13 @@ header {
 
 
 /* ---------------------- Navigation -------------------- */
+
+.title {
+    color: var(--root-font-colour);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+}
+
 #nav {
     text-align: center;
     display: inline-block;
@@ -78,18 +89,18 @@ header {
 }
 
 nav.sticky {
-    background: #fff;
+    background: blue;
     padding: 5px 0px 20px 5px;
     transition: 0.6s;
     z-index: 100;
 }
 
 nav.sticky > .nav-logo {
-    color: black;
+    color: var(--root-font-colour);
 }
 
 nav.sticky .nav-items-right > .nav-item {
-    color: black;
+    color: var(--root-font-colour);
 }
 
 .nav-items-right > .nav-item {
@@ -102,7 +113,7 @@ nav.sticky .nav-items-right > .nav-item {
 }
 
 .nav-items-right .menu-icon {
-    color: white;
+    color: var(--root-font-colour);
     font-size: 1.3rem;
     padding: 11px 2px;
     margin: 0px 15px;
@@ -195,42 +206,51 @@ nav.sticky .nav-items-right .menu-icon:hover {
     color: #ff0022;
 }
 
+
 /* ----------------------- Home ----------------------- */
 #home {
     display: flex;
     justify-content: center;
     display: flex;
     margin: auto;
-    padding-top: 250px;
+    padding-top: 100px;
 }
 
-.jumborton {
+.hero {
     width: var(--main-section-width);
     padding: 30px;
     border-radius: 8px;
+    /*background: url('../assets/images/add-pic.png');*/
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.jumborton .title h1 {
+.hero .title-image {
+    
+}
+
+.hero .title h1 {
     margin-top: 10px;
     font-size: 3.8rem;
 }
 
-.jumborton .title h3 {
+.hero .title h3 {
     margin-top: 10px;
     font-size: 1.7rem;
 }
 
-.jumborton .col {
+.hero .col {
     margin: 10px;
     display: inline-block;
 }
 
 .highlight {
-    color: var(--main-colour-one);
+    color: black;
 }
 
 /* -------------------------- About Me ------------------------ */
 #about {
+    padding-top: 250px;
     display: flex;
     justify-content: center;
     margin: auto;
@@ -327,12 +347,12 @@ nav.sticky .nav-items-right .menu-icon:hover {
     display: block;
 }
 
-.title {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 10px;
-}
 
+/* -------------------------- Experience ----------------------- */
+
+#experience h1 {
+    color: var(--root-font-colour);
+}
 
 
 /* -------------------------- Projects ----------------------- */

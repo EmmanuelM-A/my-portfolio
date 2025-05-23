@@ -86,6 +86,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    background-color: #333;
 }
 
 nav.sticky {
@@ -211,41 +212,52 @@ nav.sticky .nav-items-right .menu-icon:hover {
 #home {
     display: flex;
     justify-content: center;
-    display: flex;
     margin: auto;
-    padding-top: 100px;
+    padding-top: 120px;
 }
 
 .hero {
+    position: relative;
     width: var(--main-section-width);
     padding: 30px;
-    border-radius: 8px;
-    /*background: url('../assets/images/add-pic.png');*/
-    background-position: center;
-    background-repeat: no-repeat;
+    border: black solid 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
 }
 
-.hero .title-image {
-    
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); /* semi-transparent overla*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
-.hero .title h1 {
+.hero-overlay img {
+    height: 95%;
+
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-text h1 {
     margin-top: 10px;
     font-size: 3.8rem;
 }
 
-.hero .title h3 {
+.hero-text h3 {
     margin-top: 10px;
     font-size: 1.7rem;
 }
 
-.hero .col {
-    margin: 10px;
-    display: inline-block;
-}
-
 .highlight {
-    color: black;
+    color: red;
 }
 
 /* -------------------------- About Me ------------------------ */

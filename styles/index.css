@@ -36,6 +36,10 @@
 
     /* New Colour variables */
     --root-font-colour: black;
+    --root-bg-colour-2: rgb(31, 30, 30);
+    --nav-bg-colour: var(--root-bg-colour-2);
+
+    --section-top-gap: 100px;
 
 }
 
@@ -54,7 +58,7 @@ html {
 
 body {
     /*background: linear-gradient(180deg, black, rgb(24, 23, 23), rgb(32, 31, 31), rgb(32, 29, 29));*/
-    background: white;
+    background: var(--main-bg-color);
     position: relative;
 }
 
@@ -86,11 +90,10 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #333;
 }
 
 nav.sticky {
-    background: blue;
+    background: var(--nav-bg-colour);
     padding: 5px 0px 20px 5px;
     transition: 0.6s;
     z-index: 100;
@@ -105,7 +108,7 @@ nav.sticky .nav-items-right > .nav-item {
 }
 
 .nav-items-right > .nav-item {
-    color: var(--dark-mode-colour-two);
+    color: var(--root-font-colour);
     text-decoration: none;
     font-size: 1.3rem;
     padding: 10px 2px;
@@ -144,7 +147,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 }
 
 .nav-logo {
-    color: var(--nav-font-color);
+    color: var(--root-font-colour);
     text-decoration: none;
     font-size: 1.3rem;
     padding: 10px;
@@ -162,6 +165,9 @@ nav.sticky .nav-items-right .menu-icon:hover {
     margin-left: 10px;
     transition: 0.6s;
 }
+
+
+/* ----------------------- NAVIGATION DROPDOWN ----------------------- */
 
 .dropdown.active > .nav-item {
     color: var(--nav-link-color);
@@ -209,37 +215,34 @@ nav.sticky .nav-items-right .menu-icon:hover {
 
 
 /* ----------------------- Home ----------------------- */
+
 #home {
     display: flex;
     justify-content: center;
-    margin: auto;
-    padding-top: 120px;
+    padding-top: var(--section-top-gap);
+    margin-bottom: 30px;
+    height: 100%;
 }
 
 .hero {
     position: relative;
-    width: var(--main-section-width);
-    padding: 30px;
-    border: black solid 2px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80vh;
+    height: 100%;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6); /* semi-transparent overla*/
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
 }
 
 .hero-overlay img {
-    height: 95%;
-
+    height: 90%;
 }
 
 .hero-text {
@@ -261,12 +264,13 @@ nav.sticky .nav-items-right .menu-icon:hover {
 }
 
 /* -------------------------- About Me ------------------------ */
+
+
 #about {
-    padding-top: 250px;
+    padding-top: 40px;
     display: flex;
     justify-content: center;
     margin: auto;
-    margin: 70px 0;
 }
 
 .about-me {

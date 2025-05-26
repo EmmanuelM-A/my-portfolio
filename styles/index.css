@@ -63,10 +63,11 @@ body {
 }
 
 /* ---------------------- Header -------------------- */
+
 header {
     width: 100%;
     height: 100vh;
-    background-image: url(/Resources/Images/insert-photo.png);
+    background-image: url(../assets/images/insert-photo.png);
     background-size: cover;
     background-position: center;
 }
@@ -184,7 +185,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
     text-align: center;
-    top: 138%;
+    top: 139%;
     right: -10px;
     padding: 20px;
     opacity: 0;
@@ -211,57 +212,79 @@ nav.sticky .nav-items-right .menu-icon:hover {
 
 .dropdown-menu > .dropdown-link:hover {
     color: #ff0022;
-    transition: background 0.2s, color 0.2s;
+    transition: color 0.2s;
 }
 
 /* ----------------------- Home ----------------------- */
 
 #home {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    padding-top: var(--section-top-gap);
-    margin-bottom: 30px;
-    height: 100%;
+    min-height: 100vh;
+    padding-left: 10%;
 }
 
-.hero {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
+.home-text {
+    margin-top: 20%;
+    font-size: 1.875rem;
 }
 
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-overlay img {
-    height: 90%;
-}
-
-.hero-text {
-    text-align: left;
-}
-
-.hero-text h1 {
-    margin-top: 10px;
-    font-size: 3.8rem;
-}
-
-.hero-text h3 {
-    margin-top: 10px;
-    font-size: 1.7rem;
+.home-text h1 {
+    font-size: 3.75rem;
+    margin-bottom: 1.25rem;
 }
 
 .highlight {
-    color: red;
+    color: red; /* ADJUST COLOUR HERE */
 }
+
+.social-link {
+    color: white; /* ADJUST COLOUR HERE */
+    display: inline-block;
+    margin: 10PX;
+}
+
+.social-link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* ADJUST COLOUR HERE */
+    font-size: 5rem;
+    transition: color 0.5s, transform 0.3s;
+}
+
+.social-link a:hover {
+    color: #333; /* ADJUST COLOUR HERE */
+    transform: scale(1.08);
+}
+
+@media only screen and (max-width: 600px) {
+    #home {
+        align-items: center;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .home-text {
+        font-size: 1.25rem;
+    }
+
+    .home-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .socials {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .social-link a {
+        font-size: 2rem;
+    }
+}
+
 
 /* -------------------------- About Me ------------------------ */
 
@@ -485,45 +508,6 @@ nav.sticky .nav-items-right .menu-icon:hover {
 #show-more-button:hover {
     color: white;
     background: #ff0022;
-}
-
-/* --------------------- Socials -------------------- */
-#socials {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-}
-
-.socials-container {
-    width: 80%;
-}
-.socials-container h1 {
-    color: white;
-    font-size: 2.4rem;
-}
-
-.socials-links-container {
-    display: block;
-    text-align: left;
-    margin: auto;
-}
-.social-link {
-    color: white;
-    display: inline-block;
-    margin: 30px 40px 30px 0px;
-}
-.social-link a {
-    color: white;
-    font-size: 12rem;
-    line-height: 60px;
-    transition: color 0.5s, transform 0.5s;
-}
-.social-link a:hover {
-    color: #333;
-    transform: translateY(-20px);
-}
-.social-link h4 {
-    text-align: center;
 }
 
 /* --------------------------- Contact Me ------------------------- */

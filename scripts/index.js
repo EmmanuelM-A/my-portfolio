@@ -21,6 +21,16 @@ document.addEventListener("click", e => {
     });
 });
 
+// Close dropdown when a dropdown-link is clicked
+document.querySelectorAll('.dropdown-link').forEach(link => {
+    link.addEventListener('click', () => {
+        const dropdown = link.closest('.dropdown');
+        if (dropdown) {
+            dropdown.classList.remove('active');
+        }
+    });
+});
+
 window.addEventListener("scroll", () => {
     const nav = document.querySelector("nav");
     nav.classList.toggle("sticky", window.scrollY > 0);

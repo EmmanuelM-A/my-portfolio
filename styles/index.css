@@ -74,18 +74,18 @@ header {
 
 /* ---------------------- Navigation -------------------- */
 
-.title {
+/*.title {
     color: var(--root-font-colour);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--page-font);
     margin-left: 10px;
-}
+}*/
 
 #nav {
     text-align: center;
     display: inline-block;
     list-style-type: none;
     font-family: var(--page-font);
-    padding: 20px 10px 20px 10px;
+    padding: 20px 10px;
     width: var(--page-width);
     position: fixed;
     top: 0;
@@ -94,7 +94,7 @@ header {
 
 nav.sticky {
     background: var(--nav-bg-colour);
-    padding: 5px 0px 20px 5px;
+    padding: 20px 10px;
     transition: 0.6s;
     z-index: 100;
 }
@@ -211,8 +211,8 @@ nav.sticky .nav-items-right .menu-icon:hover {
 
 .dropdown-menu > .dropdown-link:hover {
     color: #ff0022;
+    transition: background 0.2s, color 0.2s;
 }
-
 
 /* ----------------------- Home ----------------------- */
 
@@ -635,7 +635,7 @@ footer {
 
 /* ----------------------- CSS for small screens ------------------------- */
 
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 850px) {
     /*#header {
         background-image: url();
     }*/

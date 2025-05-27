@@ -1,7 +1,7 @@
 :root {
     /* Dark mode colour variables */
     --dark-mode-colour-one: black;
-    --dark-mode-colour-two: white;
+    --dark-mode-colour-two: black;
     --body-bg-colour: var(--dark-mode-colour-one);
     --body-font-colour: var(--dark-mode-colour-two);
 
@@ -41,7 +41,13 @@
 
     --section-top-gap: 100px;
 
+    --section-title-size: 3.75rem;
+
+    --nav-height: 84px;
+
 }
+
+/* ---------------------- General -------------------- */
 
 * {
     padding: 0;
@@ -57,9 +63,15 @@ html {
 }
 
 body {
-    /*background: linear-gradient(180deg, black, rgb(24, 23, 23), rgb(32, 31, 31), rgb(32, 29, 29));*/
     background: var(--main-bg-color);
     position: relative;
+}
+
+.title {
+    color: var(--root-font-colour);
+    font-family: var(--page-font);
+    margin-bottom: 15px;
+    font-size: 3.6rem;
 }
 
 /* ---------------------- Header -------------------- */
@@ -74,12 +86,6 @@ header {
 
 
 /* ---------------------- Navigation -------------------- */
-
-/*.title {
-    color: var(--root-font-colour);
-    font-family: var(--page-font);
-    margin-left: 10px;
-}*/
 
 #nav {
     text-align: center;
@@ -227,17 +233,20 @@ nav.sticky .nav-items-right .menu-icon:hover {
 }
 
 .home-text {
-    margin-top: 20%;
     font-size: 1.875rem;
 }
 
 .home-text h1 {
-    font-size: 3.75rem;
+    font-size: var(--section-title-size);
     margin-bottom: 1.25rem;
 }
 
 .highlight {
     color: red; /* ADJUST COLOUR HERE */
+}
+
+.socials {
+    justify-content: left;
 }
 
 .social-link {
@@ -279,10 +288,6 @@ nav.sticky .nav-items-right .menu-icon:hover {
         justify-content: center;
         gap: 1.5rem;
     }
-
-    .social-link a {
-        font-size: 2rem;
-    }
 }
 
 
@@ -290,16 +295,18 @@ nav.sticky .nav-items-right .menu-icon:hover {
 
 
 #about {
-    padding-top: 40px;
+    min-height: 70vh;
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin: auto;
+    align-items: flex-start;
+    margin-top: 150px; /* SECTION GAP */
 }
 
 .about-me {
+    padding: 80px 10px 10px 10px;
     text-align: center;
     width: var(--main-section-width);
-    padding: 10px;
 }
 
 .row {
@@ -311,10 +318,12 @@ nav.sticky .nav-items-right .menu-icon:hover {
 .about-col-1 {
     flex-basis: 35%;
 }
+
 .about-col-1 img {
     width: 100%;
     border-radius: 15px;
 }
+
 .about-col-2 {
     flex-basis: 60%;
 }
@@ -324,13 +333,17 @@ nav.sticky .nav-items-right .menu-icon:hover {
     padding: 10px;
     width: auto;
 }
+
 .about-me-text-title {
     color: var(--dark-mode-colour-two);
     margin-bottom: 15px;
     font-size: 2.6rem;
+    text-align: justify;
+    text-justify: inter-word;
 }
+
 .about-me-text {
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
 }
@@ -358,11 +371,11 @@ nav.sticky .nav-items-right .menu-icon:hover {
     position: absolute;
     left: 0;
     bottom: -8px;
-    transition: 0.5s;
+    transition: 0.7s;
 }
 
 .change-content-button.active-content-link::after {
-    width: 50%;
+    width: 100%;
 }
 .content {
     color: var(--dark-mode-colour-two);
@@ -620,10 +633,6 @@ footer {
 /* ----------------------- CSS for small screens ------------------------- */
 
 @media only screen and (max-width: 850px) {
-    /*#header {
-        background-image: url();
-    }*/
-
     .nav-items-right > .nav-item {
         display: none;
     }
@@ -657,10 +666,6 @@ footer {
 
     .about-col-2 .content {
         font-size: 1.1rem;
-    }
-
-    .social-link a {
-        font-size: 9rem;
     }
 
     .contact-info, .contact-form {

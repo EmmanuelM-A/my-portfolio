@@ -39,14 +39,12 @@ window.addEventListener("scroll", () => {
 
 
 
-
-
 // ------------------- Scripts for about me section ---------------------------
 let changeDescriptionBtns = document.querySelectorAll('.change-content-button');
 
-let skillsBtn = document.querySelector('.skillsBtn');
-let experienceBtn = document.querySelector('.experienceBtn');
 let educationBtn = document.querySelector('.educationBtn');
+let hobbiesBtn = document.querySelector('.hobbiesBtn');
+let qualificationBtn = document.querySelector('.qualificationsBtn');
 
 let descriptions = document.querySelectorAll('.content');
 
@@ -61,16 +59,16 @@ function showDescription(event, descriptionToShow) {
     document.querySelector(descriptionToShow).classList.add("active-content");
 }
 
-skillsBtn.addEventListener("click", (e) => {
-    showDescription(e, '#skills');
-});
-
-experienceBtn.addEventListener("click", (e) => {
-    showDescription(e, '#experience');
-});
-
 educationBtn.addEventListener("click", (e) => {
-    showDescription(e, '#education');
+    showDescription(e, '#education-list');
+});
+
+hobbiesBtn.addEventListener("click", (e) => {
+    showDescription(e, '#hobbies-list');
+});
+
+qualificationBtn.addEventListener("click", (e) => {
+    showDescription(e, '#qualifications-list');
 });
 
 // ----------------------------------------

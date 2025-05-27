@@ -70,7 +70,7 @@ body {
 .title {
     color: var(--root-font-colour);
     font-family: var(--page-font);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 3.6rem;
 }
 
@@ -288,68 +288,70 @@ nav.sticky .nav-items-right .menu-icon:hover {
         justify-content: center;
         gap: 1.5rem;
     }
+
+    .title {
+        font-size: 2.5rem;
+    }
 }
 
 
 /* -------------------------- About Me ------------------------ */
 
-
-#about {
-    min-height: 70vh;
+#about-me {
+    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 150px; /* SECTION GAP */
-}
-
-.about-me {
-    padding: 80px 10px 10px 10px;
     text-align: center;
-    width: var(--main-section-width);
+    margin-top: 130px; /* SECTION GAP */
 }
 
-.row {
+.about-me-container {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.about-col-1 {
-    flex-basis: 35%;
-}
-
-.about-col-1 img {
-    width: 100%;
-    border-radius: 15px;
-}
-
-.about-col-2 {
-    flex-basis: 60%;
-}
-
-.text {
-    text-align: left;
-    padding: 10px;
-    width: auto;
-}
-
-.about-me-text-title {
-    color: var(--dark-mode-colour-two);
-    margin-bottom: 15px;
-    font-size: 2.6rem;
-    text-align: justify;
-    text-justify: inter-word;
+    flex-direction: column;
+    padding: 80px 10px 10px 10px;
+    align-items: flex-start;
+    width: var(--main-section-width);
 }
 
 .about-me-text {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.content {
+    color: var(--dark-mode-colour-two);
+    margin-top: 20px;
+    display: none;
+    text-align: left;
+    width: 100%;
+}
+
+.content ul li {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.content ul li span {
+    color: var(--main-colour-one);
+    font-size: 0.8rem;
+}
+
+.content ul li p {
+    margin-top: 5px;
+}
+
+.content.active-content {
+    display: block;
 }
 
 .change-content {
     margin-top: 15px;
+    margin-bottom: 0.2rem;
 }
 .change-content-button  {
     border: 0;
@@ -373,32 +375,19 @@ nav.sticky .nav-items-right .menu-icon:hover {
     bottom: -8px;
     transition: 0.7s;
 }
-
 .change-content-button.active-content-link::after {
     width: 100%;
 }
-.content {
-    color: var(--dark-mode-colour-two);
-    margin-top: 20px;
-}
-.content ul li {
-    list-style: none;
-    margin-top: 10px;
-}
-.content ul li span {
-    color: var(--main-colour-one);
-    font-size: 0.8rem;
-}
-.content ul li p {
-    margin-top: 5px;
-}
-.content {
-    display: none;
-}
-.content.active-content {
-    display: block;
-}
 
+@media only screen and (max-width: 450px) {
+    .change-content-button {
+        font-size: 1rem;
+    }
+
+    .about-me-text {
+        font-size: 1rem;
+    }
+}
 
 /* -------------------------- Experience ----------------------- */
 
@@ -645,29 +634,6 @@ footer {
         display: block;
     }
 
-    .jumborton {
-        width: auto;
-    }
-
-    .about-col-1, .about-col-2 {
-        flex-basis: 100%;
-    }
-
-    .about-col-1 {
-        margin-bottom: 30px;
-    }
-
-    .about-col-2 .about-me-text {
-        font-size: 1rem;
-    }
-    .about-col-2 .change-content-button {
-        font-size: 1.1rem;
-    }
-
-    .about-col-2 .content {
-        font-size: 1.1rem;
-    }
-
     .contact-info, .contact-form {
         flex-basis: 100%;
     }
@@ -683,5 +649,4 @@ footer {
     footer .footer-main p {
         font-size: 0.9rem;
     }
-
 }

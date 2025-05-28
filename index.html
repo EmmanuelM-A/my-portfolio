@@ -102,9 +102,64 @@
             <h1 class="title">My Skills</h1>
 
             <div class="skills-container">
+                <div class="skills-categories">
+                    <button class="skills-btn active" data-skill-category="featured">Featured</button>
+                    <button class="skills-btn" data-skill-category="languages">Languages</button>
+                    <button class="skills-btn" data-skill-category="frontend">Frontend</button>
+                    <button class="skills-btn" data-skill-category="backend">Backend</button>
+                    <button class="skills-btn" data-skill-category="ai">AI</button>
+                    <!--<button class="skills-btn" data-skill-category="backend">Show All</button>-->
+                </div>
+
+                <div class="skills-content">
+                    <!-- Featured Skiils -->
+                    <div class="skills-grid active" id="skills-featured">
+                        <div class="skill-pill">
+                            <img src="/assets/icons/java-icon.svg" alt="Java">
+                            <span>Java</span>
+                            <span class="years">3 Years</span>
+                        </div>
+
+                        <div class="skill-pill">
+                            <img src="/assets/icons/javascript-icon.svg" alt="JavaScript">
+                            <span>JavaScript</span>
+                            <span class="years">2 Years</span>
+                        </div>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="skills-grid" id="skills-languages">
+                        <div class="skill-pill">
+                            <img src="/assets/icons/python-icon.svg" alt="Python">
+                            <span>Python</span>
+                            <span class="years">2 yrs</span>
+                        </div>
+                    </div>
+
+                    <!-- Frontend -->
+                    <div class="skills-grid" id="skills-frontend">
+                        <div class="skill-pill">
+                            <img src="/assets/icons/html-icon.svg" alt="HTML">
+                            <span>HTML</span>
+                            <span class="years">3 yrs</span>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="skills-grid" id="skills-backend">
+                        <div class="skill-pill">
+                            <img src="/assets/icons/mysql-icon.svg" alt="MySQL">
+                            <span>MySQL</span>
+                            <span class="years">2 yrs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="skills-container">
                 <div class="skill">
                     <img src="/assets/icons/java-icon.svg" alt="Java Logo">
-                    <p>Java</p>
+                    <p>Java <br /> 3 Years</p>
                 </div>
 
                 <div class="skill">
@@ -144,7 +199,7 @@
                     <img src="/assets/icons/github-icon.svg" alt="Github Logo">
                     <p>Github</p>
                 </div>
-            </div>
+            </div>-->
         </section>
 
         <!--Experience-->
@@ -224,7 +279,7 @@
                         <div class="contact-icons">
                             <a href="https://github.com/EmmanuelM-A" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                         </div>
-                        <a href="/Resources/Files/Maduka Agbeze Emmanuel - CV.pdf" download class="btn">Download CV</a>
+                        <a href="" download class="btn">Download CV</a>
                     </div>
                     <div class="contact-form">
                         <form>

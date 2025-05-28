@@ -414,31 +414,109 @@ nav.sticky .nav-items-right .menu-icon:hover {
     padding: 20px 10px 10px 10px;
 }
 
-.skill {
-    flex-direction: column;
+/*.skill {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-    border-radius: 30px;
-    background: grey;
-    width: 230px;
-    height: 230px;
-    transition: background 0.5s;
-}
-
-.skill:hover {
-    background: darkgray;
+    justify-content: center;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 6px rgba(0,0,0,0.04);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    width: 180px;
+    min-height: 180px;
+    margin: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
 }
 
 .skill img {
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.08));
 }
 
 .skill p {
-    margin-top: 25px;
-    color: var(--main-text-colour);
+    font-size: 1.1rem;
+    color: #222;
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.skill:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.16), 0 3px 12px rgba(0,0,0,0.08);
+    background: #f8f8ff;
+}*/
+
+.skills-categories {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skills-btn {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.skills-btn.active,
+.skills-btn:hover {
+  background: #222;
+  color: #fff;
+}
+
+.skills-content {
+  width: 100%;
+}
+
+.skills-grid {
+  display: none;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skills-grid.active {
+  display: flex;
+}
+
+.skill-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+  padding: 0.7rem 1.3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  min-width: 120px;
+}
+
+.skill-pill img {
+  width: 28px;
+  height: 28px;
+}
+
+.skill-pill .years {
+  background: #ff0022;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  padding: 0.1rem 0.7rem;
+  margin-left: auto;
 }
 
 /* -------------------------- Experience ----------------------- */

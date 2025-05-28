@@ -521,6 +521,20 @@ nav.sticky .nav-items-right .menu-icon:hover {
     padding: 10px 50px;
     position: relative;
     width: 50%; 
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes movedown {
+    0% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 .timeline-card {
@@ -559,23 +573,6 @@ nav.sticky .nav-items-right .menu-icon:hover {
     z-index: 10;
 }
 
-/*.container {
-    animation: appear 5s linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
-}
-
-@keyframes appear {
-    from {
-        opacity: 0;
-        scale: 0.5;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}*/
-
 .right-container img {
     left: -20px;
 }
@@ -584,23 +581,35 @@ nav.sticky .nav-items-right .menu-icon:hover {
     content: '';
     position: absolute;
     width: 6px;
-    height: 100%;
+    height: 0;
     background: #fff;
     top: 0;
     left: 50%;
     margin-left: -3px;
     z-index: -1;
-    animation: moveline 6s fowards;
+    animation: moveline 6s cubic-bezier(.23,1.01,.32,1) forwards;
+    /*transition: height 1.2s cubic-bezier(.23,1.01,.32,1);*/
+}
+
+/* TODO: FIGURE OUT HOW TO DO A VERTICAL TIMELINE ANIMATION ON SCROLL!!!!!! */
+
+.timeline.animate::after {
+    animation: moveline 1.2s cubic-bezier(.23,1.01,.32,1) forwards;
 }
 
 @keyframes moveline {
-    0% {
+    from { height: 0; }
+    to { height: 100%; }
+}
+
+/*@keyframes moveline {
+    from {
         height: 0;
     }
-    100% {
+    to {
         height: 100%;
     }
-}
+}*/
 
 .left-container-arrow {
     height: 0;
@@ -610,7 +619,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid #fff;
+    border-left: 15px solid red;
     right: 35px;
 }
 
@@ -622,22 +631,53 @@ nav.sticky .nav-items-right .menu-icon:hover {
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #fff;
+    border-right: 15px solid red;
     left: 35px;
 }
 
 
-@media (max-width: 600px) {
-  .timeline .container {
-    padding: 10px 5px;
-    max-width: 98vw;
-  }
+@media screen and (max-width: 950px) {
+    .timeline {
+        margin: 50px auto;
+    }
 
-  .timeline-card {
-    padding: 16px 8px;
-    font-size: 1rem;
-    max-width: 100%;
-  }
+    .timeline::after {
+        left: 31px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+
+    .timeline-card {
+        padding: 16px 8px;
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .text-box {
+        font-size: 13px;
+    }
+
+    .text-box small {
+        margin-bottom: 10px;
+    }
+
+    .right-container {
+        left: 0;
+    }
+
+    .left-container img, .right-container img {
+        left: 1px;
+    }
+
+    .left-container-arrow, .right-container-arrow {
+        border-radius: 15px solid red;
+        border-left: 0;
+        left: 0;
+    }
 }
 
 /* -------------------------- Projects ----------------------- */

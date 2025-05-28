@@ -88,70 +88,24 @@ document.querySelectorAll('.skills-btn').forEach(btn => {
   });
 });
 
-/*document.addEventListener("DOMContentLoaded", function() {
-  const timeline = document.querySelector('.timeline');
-  if (timeline) {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          timeline.classList.add('visible');
-        } else {
-          timeline.classList.remove('visible');
-        }
-      },
-      { threshold: 0.2 }
-    );
-    observer.observe(timeline);
-  }
-});*/
+
 
 document.addEventListener("DOMContentLoaded", function() {
   const timeline = document.querySelector('.timeline');
   if (!timeline) return;
 
-  const timelineLine = document.createElement('div');
-  timelineLine.className = 'timeline-scroll-line';
-  timeline.appendChild(timelineLine);
-
-  // Hide the ::after pseudo-element line
-  timeline.style.setProperty('position', 'relative');
-  timeline.style.setProperty('overflow', 'visible');
-
-  // Style for the JS line (matches your ::after)
-  Object.assign(timelineLine.style, {
-    position: 'absolute',
-    width: '6px',
-    background: '#fff',
-    top: '0',
-    left: '50%',
-    marginLeft: '-3px',
-    zIndex: '-1',
-    borderRadius: '3px',
-    transition: 'height 0.5s cubic-bezier(.23,1.01,.32,1)',
-    height: '0'
-  });
-
-  function updateTimelineLine() {
-    const rect = timeline.getBoundingClientRect();
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    const totalHeight = timeline.offsetHeight;
-
-    // Calculate how much of the timeline is visible
-    let visibleStart = Math.max(0, windowHeight - rect.top);
-    let visibleEnd = Math.min(windowHeight, rect.bottom);
-    let visibleHeight = visibleEnd - Math.max(rect.top, 0);
-
-    // Clamp between 0 and totalHeight
-    let percent = Math.max(0, Math.min(visibleHeight / totalHeight, 1));
-
-    // Set the height of the line
-    timelineLine.style.height = (percent * totalHeight) + 'px';
-  }
-
-  window.addEventListener('scroll', updateTimelineLine);
-  window.addEventListener('resize', updateTimelineLine);
-  updateTimelineLine();
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        timeline.classList.add('animate');
+        //observer.disconnect(); // Run only once
+      }
+    },
+    { threshold: 0.2 }
+  );
+  observer.observe(timeline);
 });
+
 
 
 // ------------------- Scripts for projects section ---------------------------

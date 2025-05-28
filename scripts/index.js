@@ -75,6 +75,19 @@ qualificationBtn.addEventListener("click", (e) => {
 
 
 
+document.querySelectorAll('.skills-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    // Remove active from all buttons
+    document.querySelectorAll('.skills-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    // Hide all grids
+    document.querySelectorAll('.skills-grid').forEach(grid => grid.classList.remove('active'));
+    // Show selected grid
+    const cat = this.getAttribute('data-skill-category');
+    document.getElementById('skills-' + cat).classList.add('active');
+  });
+});
+
 
 
 // ------------------- Scripts for projects section ---------------------------

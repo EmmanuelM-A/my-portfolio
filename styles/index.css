@@ -520,8 +520,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 .container {
     padding: 10px 50px;
     position: relative;
-    width: 50%;            
-    background: rgba(0, 0, 0, 0.3);
+    width: 50%; 
 }
 
 .timeline-card {
@@ -530,9 +529,17 @@ nav.sticky .nav-items-right .menu-icon:hover {
     border-radius: 12px;
     font-size: 1.1rem;
     width: 100%;
-    max-width: 400px;
     box-sizing: border-box;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.timeline-card h2 {
+    font-weight: 600;
+}
+
+.timeline-card small {
+    display: inline-block;
+    margin-bottom: 15px;
 }
 
 .left-container {
@@ -542,6 +549,83 @@ nav.sticky .nav-items-right .menu-icon:hover {
 .right-container {
     left: 50%;
 }
+
+.container img {
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 15px;
+    z-index: 10;
+}
+
+/*.container {
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}*/
+
+.right-container img {
+    left: -20px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 6s fowards;
+}
+
+@keyframes moveline {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+.left-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: 35px;
+}
+
+.right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: 35px;
+}
+
 
 @media (max-width: 600px) {
   .timeline .container {

@@ -74,7 +74,7 @@ qualificationBtn.addEventListener("click", (e) => {
 // ----------------------------------------
 
 
-
+// ------------------- Scripts for Skills section ---------------------------
 document.querySelectorAll('.skills-btn').forEach(btn => {
   btn.addEventListener('click', function() {
     // Remove active from all buttons
@@ -87,25 +87,10 @@ document.querySelectorAll('.skills-btn').forEach(btn => {
     document.getElementById('skills-' + cat).classList.add('active');
   });
 });
+// ----------------------------------------------------------------------------
 
 
-
-document.addEventListener("DOMContentLoaded", function() {
-  const timeline = document.querySelector('.timeline');
-  if (!timeline) return;
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        timeline.classList.add('animate');
-        //observer.disconnect(); // Run only once
-      }
-    },
-    { threshold: 0.2 }
-  );
-  observer.observe(timeline);
-});
-
+// ------------------- Scripts for experience section ---------------------------
 
 
 // ------------------- Scripts for projects section ---------------------------

@@ -93,6 +93,17 @@ document.querySelectorAll('.skills-btn').forEach(btn => {
 // ------------------- Scripts for experience section ---------------------------
 
 
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+
+
 // ------------------- Scripts for projects section ---------------------------
 let showMoreBtn = document.querySelector('#show-more-button');
 let currentItems = 3;

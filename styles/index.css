@@ -813,47 +813,6 @@ nav.sticky .nav-items-right .menu-icon:hover {
     transform: scale(1.08);
 }
 
-/*.project-content {
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    transition: height 0.5s;
-}
-.project-content h4 {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 25px;
-}
-.project-content .inline {
-    display: flex;
-}
-.project-content .inline a {
-    margin: 20px 10px 0px 0px;
-    color: #ff004f;
-    font-size: 1.1rem;
-    line-height: 60px;
-    background: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-    transition: color 0.3s, background 0.3s;
-}
-.project-content .inline a:hover {
-    color: white;
-    background: #ff004f;
-}*/
 .project-card:hover img {
     transform: scale(1.1);
 }
@@ -884,6 +843,24 @@ nav.sticky .nav-items-right .menu-icon:hover {
 #show-more-button:hover {
     color: white;
     background: #ff0022;
+}
+
+@media only screen and (max-width: 600px) {
+    .project-content h4 {
+        font-size: 1.7rem;
+    }
+    .tech-stack span {
+        font-size: 1.15rem;
+        padding: 0.35rem 1rem;
+    }
+    .project-desc {
+        font-size: 1.25rem;
+    }
+    .project-content .inline a {
+        font-size: 1.5rem;
+        width: 52px;
+        height: 52px;
+    }
 }
 
 /* --------------------------- Contact Me ------------------------- */

@@ -742,9 +742,9 @@ nav.sticky .nav-items-right .menu-icon:hover {
     text-align: left;
     justify-content: center;
     transition:
-        height 0.6s,
-        opacity 0.6s,
-        padding 0.6s;
+        height 0.5s,
+        opacity 0.5s,
+        padding 0.5s;
     gap: 1.1rem;
     opacity: 0;
 }
@@ -863,14 +863,85 @@ nav.sticky .nav-items-right .menu-icon:hover {
     }
 }
 
-/* --------------------------- Contact Me ------------------------- */
-#contact {
-    /*border: 2px solid green;*/
+/* --------------------------- Resume ------------------------- */
+
+#resume {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-top: 100px;
-    color: white;
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 200px; /* SECTION GAP */
+}
+
+.resume-desc {
+    color: #ddd;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.resume-buttons {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.resume-btn {
+    background: #ff004f;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.resume-btn:hover {
+    background: #fff;
+    color: #ff004f;
+    transform: translateY(-2px) scale(1.04);
+}
+
+.chatbot-box {
+    background: #181b23;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    padding: 2.5rem 1.5rem;
+    margin: 0 auto;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chatbot-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+    gap: 1rem;
+}
+
+.chatbot-placeholder i {
+    font-size: 2.5rem;
+    color: #ff004f;
+}
+
+
+/* --------------------------- Contact Me ------------------------- */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 200px; /* SECTION GAP */
 }
 
 .contact-box {

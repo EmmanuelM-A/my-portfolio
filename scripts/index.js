@@ -95,20 +95,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const containers = document.querySelectorAll(".container");
 
     const observer = new IntersectionObserver(
-        entries => {
+        (entries) => {
             entries.forEach(entry => {
+                const idx = Array.from(containers).indexOf(entry.target);
                 if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
+                    setTimeout(() => {
+                        entry.target.classList.add("show");
+                    }, idx * 180); // 180ms delay per card
                 } else {
                     entry.target.classList.remove("show");
                 }
             });
         },
-        { threshold: 0.1 }
+        { threshold: 0.3 }
     );
     containers.forEach(el => observer.observe(el));
 });
-
 // ----------------------------------------------------------------------------
 
 

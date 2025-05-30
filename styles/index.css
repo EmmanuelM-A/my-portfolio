@@ -538,14 +538,13 @@ nav.sticky .nav-items-right .menu-icon:hover {
 .timeline-line {
     position: absolute;
     width: 6px;
-    height: 0;
+    height: 100%;
     background: #fff;
     top: 0;
     left: 50%;
     margin-left: -3px;
     z-index: 0;
     border-radius: 3px;
-    transition: height 0.6s cubic-bezier(.23,1.01,.32,1);
 }
 
 .container {
@@ -555,7 +554,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
     box-sizing: border-box;
     opacity: 0;
     transform: translateY(50px);
-    transition: all 0.6s ease-out;
+    transition: opacity 0.6s, transform 0.6s;
 }
 
 .container img {

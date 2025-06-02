@@ -1,50 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-    /* Dark mode colour variables */
-    --dark-mode-colour-one: black;
-    --dark-mode-colour-two: black;
-    --body-bg-colour: var(--dark-mode-colour-one);
-    --body-font-colour: var(--dark-mode-colour-two);
+    /* DIMENSIONS */
 
-    /* Light mode colour variables */
-    --light-mode-colour-one: white;
-    --light-mode-colour-two: black;
-    /*--body-bg-colour: var(--light-mode-colour-one);
-    --body-font-colour: var(--light-mode-colour-two);*/
-
-    /* General Variables */
-    --main-colour-one: rgb(236, 21, 21);
-    --main-colour-two: #830029;
-
-    --main-bg-color: rgb(241, 238, 238);
-    --nav-font-color: white;
-    --nav-bg-color: rgba(236, 232, 232, 0.897);
-    --nav-link-color: var(--main-colour-one);
-    --second-font-color: var(--nav-link-color);
-
-    --page-width: 100%;
-    --page-min-width: 750px;
-    --page-font: Arial, Helvetica, sans-serif;
-
-    --main-section-width: 80%;
-    --jumborton-bg-color: rgb(0, 0, 0);
-
-    --onChange-color: var(--nav-link-color);
-
-    --about-me-width-picture: 350px;
-    --about-me-height-picture: var(--about-me-width-picture);
+    --main-section-width: 80%; 
 
 
-    /* New Colour variables */
-    --root-font-colour: black;
-    --root-bg-colour-2: rgb(31, 30, 30);
-    --nav-bg-colour: var(--root-bg-colour-2);
-
-    --section-top-gap: 100px;
+    /* FONTS */
+    --heading-fonts: Poppins, Arial;
+    --body-fonts: Inter, sans-serif;
+    --sub-headings-font: ;
 
     --section-title-size: 3.75rem;
 
-    --nav-height: 84px;
 
+    /* LIGHT MODE COLOUR PALETTE */
+    --primary-bg-colour: rgb(241, 238, 238);
+
+    --primary-text-colour: black;
+    --secondary-text-colour: #666;
+
+    --card-bg: #FFFFFF;
+    --timeline-line: #D3D3D3;
+    --accent: #007BFF;
+
+    --primary-accessory-colour: rgb(236, 21, 21);
+
+    --nav-bg-colour: rgb(31, 30, 30);
+}
+
+/* DARK MODE COLOUR PALETTE */
+[data-theme="dark-mode"] {
+    --bg-color: #121212;
+    --text-color: #EAEAEA;
+    --secondary-text: #AAA;
+    --card-bg: #1E1E1E;
+    --timeline-line: #444;
+    --accent: #4FC3F7;
+
+    /**/
+    --primary-bg-colour: rgb(241, 238, 238);
+
+    --primary-text-colour: black;
+    --secondary-text-colour: #666;
+
+    --card-bg: #FFFFFF;
+    --timeline-line: #D3D3D3;
+    --accent: #007BFF;
+
+    --primary-accessory-colour: rgb(236, 21, 21);
+
+    --nav-bg-colour: rgb(31, 30, 30);
 }
 
 /*
@@ -53,7 +60,6 @@
     TODO: Complete chatbot
     TODO: Work on form, contact-me mechanism
     TODO: Get icons, images and data
-    TODO: Make all sections fully responsive (test on mobile/tablet/desktop)
     TODO: Add smooth scroll and section reveal animations
     TODO: Optimize images and assets for faster loading
     TODO: Add alt text and improve accessibility (a11y)
@@ -65,8 +71,6 @@
     TODO: Add a 404 page and error handling for broken links
     TODO: Add favicon and update browser tab title
     TODO: Write clear, concise project descriptions and about me
-    TODO: Add testimonials or references (optional)
-    TODO: Add analytics (Google Analytics, Plausible, etc.)
     TODO: Add dark mode/light mode toggle (optional)
 */
 
@@ -75,7 +79,6 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
@@ -86,14 +89,14 @@ html {
 }
 
 body {
-    background: var(--main-bg-color);
+    background: var(--primary-bg-colour);
     position: relative;
 }
 
 .title {
-    color: var(--root-font-colour);
-    font-family: var(--page-font);
-    font-size: 3.6rem;
+    color: var(--primary-text-colour);
+    font-family: var(--heading-fonts);
+    font-size: var(--section-title-size);
     text-align: left;
     width: var(--main-section-width);
     margin-bottom: 2rem;
@@ -117,9 +120,9 @@ header {
     text-align: center;
     display: inline-block;
     list-style-type: none;
-    font-family: var(--page-font);
+    font-family: var(--body-fonts);
     padding: 20px 10px;
-    width: var(--page-width);
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -133,15 +136,15 @@ nav.sticky {
 }
 
 nav.sticky > .nav-logo {
-    color: var(--root-font-colour);
+    color: var(--primary-text-colour);
 }
 
 nav.sticky .nav-items-right > .nav-item {
-    color: var(--root-font-colour);
+    color: var(--primary-text-colour);
 }
 
 .nav-items-right > .nav-item {
-    color: var(--root-font-colour);
+    color: var(--primary-text-colour);
     text-decoration: none;
     font-size: 1.3rem;
     padding: 10px 2px;
@@ -150,7 +153,7 @@ nav.sticky .nav-items-right > .nav-item {
 }
 
 .nav-items-right .menu-icon {
-    color: var(--root-font-colour);
+    color: var(--primary-text-colour);
     font-size: 1.3rem;
     padding: 11px 2px;
     margin: 0px 15px;
@@ -168,7 +171,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
     content: '';
     width: 0;
     height: 3px;;
-    background: var(--main-colour-one);
+    background: var(--primary-accessory-colour);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -180,7 +183,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 }
 
 .nav-logo {
-    color: var(--root-font-colour);
+    color: var(--primary-text-colour);
     text-decoration: none;
     font-size: 1.3rem;
     padding: 10px;
@@ -203,7 +206,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 /* ----------------------- NAVIGATION DROPDOWN ----------------------- */
 
 .dropdown.active > .nav-item {
-    color: var(--nav-link-color);
+    color: var(--primary-accessory-colour);
 }
 
 .dropdown {
@@ -274,6 +277,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 
 .home-text {
     font-size: 1.875rem;
+    font-family: var(--heading-fonts);
 }
 
 .home-text h1 {
@@ -376,7 +380,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 }
 
 .content ul li span {
-    color: var(--main-colour-one);
+    color: var(--primary-accessory-colour);
     font-size: 0.8rem;
 }
 
@@ -408,7 +412,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
     content: '';
     width: 0;
     height: 3px;
-    background: var(--main-colour-one);
+    background: var(--primary-accessory-colour);
     position: absolute;
     left: 0;
     bottom: -8px;

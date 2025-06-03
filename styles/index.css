@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    /* DIMENSIONS */
+    /* DIMENSIONS & POSITIONING */
 
-    --main-section-width: 80%; 
+    --main-section-width: 80%;
+    --section-gap: 200px; 
 
 
     /* FONTS */
@@ -16,21 +17,11 @@
 
 
     /* LIGHT MODE COLOUR PALETTE */
-    --primary-colour: rgb(241, 238, 238);
-    --secondary-colour: ;
-    --accent-colour: ;
-    --text-colour: black;
-    --bg-colour: rgb(241, 238, 238);
-
-    --secondary-text-colour: #666;
-
-    --card-bg: #FFFFFF;
-    --timeline-line: #D3D3D3;
-    --accent: #007BFF;
-
-    --primary-accessory-colour: rgb(236, 21, 21);
-
-    --nav-bg-colour: rgb(31, 30, 30);
+    --primary-colour: #4d9d79;
+    --secondary-colour: #98ddbe;
+    --accent-colour: #5adda2;
+    --text-colour: #110e0e;
+    --bg-colour: #f6f9f8;
 }
 
 /* DARK MODE COLOUR PALETTE 
@@ -42,6 +33,12 @@
     --timeline-line: #444;
     --accent: #4FC3F7;
 
+    --primary-colour: rgb(241, 238, 238);
+    --secondary-colour: rgb(236, 21, 21);
+    --accent-colour: rgb(31, 30, 30);
+    --text-colour: black;
+    --bg-colour: rgb(241, 238, 238);
+
     /*
     --primary-bg-colour: rgb(241, 238, 238);
 
@@ -52,7 +49,7 @@
     --timeline-line: #D3D3D3;
     --accent: #007BFF;
 
-    --primary-accessory-colour: rgb(236, 21, 21);
+    --secondary-colour: rgb(236, 21, 21);
 
     --nav-bg-colour: rgb(31, 30, 30);
 }*/
@@ -92,7 +89,7 @@ html {
 }
 
 body {
-    background: var(--primary-colour);
+    background: var(--bg-colour);
     /*font-family: var(--body-fonts);*/
     position: relative;
 }
@@ -133,22 +130,22 @@ header {
 }
 
 nav.sticky {
-    background: var(--nav-bg-colour);
+    background: var(--bg-colour);
     padding: 20px 10px;
     transition: 0.6s;
     z-index: 100;
 }
 
 nav.sticky > .nav-logo {
-    color: var(--primary-colour);
+    color: var(--text-colour); /* COLOUR OF TEXT ON STICKY BAR */
 }
 
 nav.sticky .nav-items-right > .nav-item {
-    color: var(--primary-colour);
+    color: var(--text-colour); /* COLOUR OF TEXT ON STICKY BAR */
 }
 
 .nav-items-right > .nav-item {
-    color: var(--primary-colour);
+    color: var(--text-colour); /* COLOUR OF TEXT ON DEFAULT BAR */
     text-decoration: none;
     font-size: 1.3rem;
     padding: 10px 2px;
@@ -157,7 +154,7 @@ nav.sticky .nav-items-right > .nav-item {
 }
 
 .nav-items-right .menu-icon {
-    color: var(--primary-colour);
+    color: var(--text-colour);
     font-size: 1.3rem;
     padding: 11px 2px;
     margin: 0px 15px;
@@ -165,17 +162,17 @@ nav.sticky .nav-items-right > .nav-item {
 }
 
 nav.sticky .nav-items-right .menu-icon {
-    color: black;
+    color: var(--text-colour);
 }
 nav.sticky .nav-items-right .menu-icon:hover {
-    color: #ff0022;
+    color: var(--secondary-colour);
 }
 
 .nav-items-right > .nav-item::after {
     content: '';
     width: 0;
     height: 3px;;
-    background: var(--primary-accessory-colour);
+    background: var(--secondary-colour); /* NAV ITEM HIGHLIGHT */
     position: absolute;
     left: 0;
     bottom: 0;
@@ -187,7 +184,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 }
 
 .nav-logo {
-    color: var(--primary-colour);
+    color: var(--text-colour);
     text-decoration: none;
     font-size: 1.3rem;
     padding: 10px;
@@ -210,7 +207,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 /* ----------------------- NAVIGATION DROPDOWN ----------------------- */
 
 .dropdown.active > .nav-item {
-    color: var(--primary-accessory-colour);
+    color: var(--text-colour);
 }
 
 .dropdown {
@@ -218,7 +215,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 }
 
 .dropdown-menu {
-    background: white;
+    background: var(--bg-colour);
     position: absolute;
     width: 200px;
     border-bottom-left-radius: 30px;
@@ -240,7 +237,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 }
 
 .dropdown-menu > .dropdown-link {
-    color: black;
+    color: var(--text-colour);
     display: block;
     font-size: 1.9rem;
     text-decoration: none;
@@ -250,7 +247,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 }
 
 .dropdown-menu > .dropdown-link:hover {
-    color: #ff0022;
+    color: var(--secondary-colour);
     transition: color 0.2s;
 }
 
@@ -281,7 +278,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 
 .home-text {
     font-size: 1.875rem;
-    color: var(--primary-colour);
+    color: var(--text-colour);
     font-family: var(--heading-fonts);
 }
 
@@ -291,7 +288,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 }
 
 .highlight {
-    color: red; /* ADJUST COLOUR HERE */
+    color: var(--accent-colour); /* ADJUST COLOUR HERE */
 }
 
 .socials {
@@ -299,7 +296,6 @@ nav.sticky .nav-items-right .menu-icon:hover {
 }
 
 .social-link {
-    color: white; /* ADJUST COLOUR HERE */
     display: inline-block;
     margin: 10PX;
 }
@@ -308,13 +304,13 @@ nav.sticky .nav-items-right .menu-icon:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white; /* ADJUST COLOUR HERE */
+    color: var(--secondary-colour); /* ADJUST COLOUR HERE */
     font-size: 5rem;
     transition: color 0.5s, transform 0.3s;
 }
 
 .social-link a:hover {
-    color: #333; /* ADJUST COLOUR HERE */
+    color: var(--primary-colour); /* ADJUST COLOUR HERE */
     transform: scale(1.08);
 }
 
@@ -352,7 +348,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 200px; /* SECTION GAP */
+    margin-top: var(--section-gap);
 }
 
 .about-me-container {
@@ -364,15 +360,16 @@ nav.sticky .nav-items-right .menu-icon:hover {
 }
 
 .about-me-text {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-colour);
+    font-family: var(--body-fonts);
     font-size: 1.2rem;
     text-align: justify;
     text-justify: inter-word;
 }
 
 .content {
-    color: var(--dark-mode-colour-two);
+    color: var(--text-colour);
+    font-family: var(--body-fonts);
     margin-top: 20px;
     display: none;
     text-align: left;
@@ -381,12 +378,12 @@ nav.sticky .nav-items-right .menu-icon:hover {
 
 .content ul li {
     list-style: none;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .content ul li span {
-    color: var(--primary-accessory-colour);
-    font-size: 0.8rem;
+    color: var(--secondary-colour);
+    font-size: 1rem;
 }
 
 .content ul li p {
@@ -405,7 +402,8 @@ nav.sticky .nav-items-right .menu-icon:hover {
     border: 0;
     outline: 0;
     background: 0;
-    color: var(--dark-mode-colour-two);
+    color: var(--text-colour);
+    font-family: var(--body-fonts);
     font-size: 1.2rem;
     font-weight: 500;
     cursor: pointer;
@@ -417,7 +415,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
     content: '';
     width: 0;
     height: 3px;
-    background: var(--primary-accessory-colour);
+    background: var(--secondary-colour);
     position: absolute;
     left: 0;
     bottom: -8px;

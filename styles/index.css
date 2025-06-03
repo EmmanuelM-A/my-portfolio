@@ -16,9 +16,12 @@
 
 
     /* LIGHT MODE COLOUR PALETTE */
-    --primary-bg-colour: rgb(241, 238, 238);
+    --primary-colour: rgb(241, 238, 238);
+    --secondary-colour: ;
+    --accent-colour: ;
+    --text-colour: black;
+    --bg-colour: rgb(241, 238, 238);
 
-    --primary-text-colour: black;
     --secondary-text-colour: #666;
 
     --card-bg: #FFFFFF;
@@ -30,7 +33,7 @@
     --nav-bg-colour: rgb(31, 30, 30);
 }
 
-/* DARK MODE COLOUR PALETTE */
+/* DARK MODE COLOUR PALETTE 
 [data-theme="dark-mode"] {
     --bg-color: #121212;
     --text-color: #EAEAEA;
@@ -39,10 +42,10 @@
     --timeline-line: #444;
     --accent: #4FC3F7;
 
-    /**/
+    /*
     --primary-bg-colour: rgb(241, 238, 238);
 
-    --primary-text-colour: black;
+    --primary-colour: black;
     --secondary-text-colour: #666;
 
     --card-bg: #FFFFFF;
@@ -52,7 +55,7 @@
     --primary-accessory-colour: rgb(236, 21, 21);
 
     --nav-bg-colour: rgb(31, 30, 30);
-}
+}*/
 
 /*
     TODO: CLEAN UP CSS FILES AND HTML FILE
@@ -89,12 +92,13 @@ html {
 }
 
 body {
-    background: var(--primary-bg-colour);
+    background: var(--primary-colour);
+    /*font-family: var(--body-fonts);*/
     position: relative;
 }
 
 .title {
-    color: var(--primary-text-colour);
+    color: var(--text-colour);
     font-family: var(--heading-fonts);
     font-size: var(--section-title-size);
     text-align: left;
@@ -108,9 +112,9 @@ body {
 header {
     width: 100%;
     height: 100vh;
-    background-image: url(../assets/images/insert-photo.png);
+    /*background-image: url(../assets/images/insert-photo.png);
     background-size: cover;
-    background-position: center;
+    background-position: center;*/
 }
 
 
@@ -136,15 +140,15 @@ nav.sticky {
 }
 
 nav.sticky > .nav-logo {
-    color: var(--primary-text-colour);
+    color: var(--primary-colour);
 }
 
 nav.sticky .nav-items-right > .nav-item {
-    color: var(--primary-text-colour);
+    color: var(--primary-colour);
 }
 
 .nav-items-right > .nav-item {
-    color: var(--primary-text-colour);
+    color: var(--primary-colour);
     text-decoration: none;
     font-size: 1.3rem;
     padding: 10px 2px;
@@ -153,7 +157,7 @@ nav.sticky .nav-items-right > .nav-item {
 }
 
 .nav-items-right .menu-icon {
-    color: var(--primary-text-colour);
+    color: var(--primary-colour);
     font-size: 1.3rem;
     padding: 11px 2px;
     margin: 0px 15px;
@@ -183,7 +187,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 }
 
 .nav-logo {
-    color: var(--primary-text-colour);
+    color: var(--primary-colour);
     text-decoration: none;
     font-size: 1.3rem;
     padding: 10px;
@@ -277,6 +281,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 
 .home-text {
     font-size: 1.875rem;
+    color: var(--primary-colour);
     font-family: var(--heading-fonts);
 }
 

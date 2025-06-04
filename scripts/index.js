@@ -35,7 +35,29 @@ window.addEventListener("scroll", () => {
     const nav = document.querySelector("nav");
     nav.classList.toggle("sticky", window.scrollY > 0);
 });
-// -----------------------------------------------
+// --------------------------------------------------------------------------
+
+
+
+// ------------------- PORTFOLIO DROPDOWN ---------------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector(".portfolio-dropdown .dropdown-toggle");
+    const menu = document.querySelector(".portfolio-dropdown-menu");
+
+    toggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        menu.classList.toggle("show");
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+            menu.classList.remove("show");
+        }
+    });
+});
+
+// ----------------------------------------------------------------------------
 
 
 

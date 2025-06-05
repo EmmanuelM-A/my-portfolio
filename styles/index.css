@@ -142,6 +142,10 @@ nav.sticky .nav-items-right > .nav-item {
     display: none;
 }
 
+.nav-items-right .menu-icon:hover {
+    color: var(--secondary-colour);
+}
+
 nav.sticky .nav-items-right .menu-icon {
     color: var(--text-colour);
 }
@@ -170,7 +174,11 @@ nav.sticky .nav-items-right .menu-icon:hover {
     font-size: 1.3rem;
     padding: 10px;
     float: left;
-    transition: 0.6s;
+    transition: color 0.6s;
+}
+
+.nav-logo:hover {
+    color: var(--secondary-colour);
 }
 
 .nav-items-right {
@@ -272,6 +280,39 @@ nav.sticky .nav-items-right .menu-icon:hover {
   background: var(--primary-colour);
   color: var(--bg-colour);
   outline: none;
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: var(--bg-colour);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: none;
+}
+
+#theme-switch svg {
+    fill: var(--text-colour);
+}
+
+#theme-switch svg:hover {
+    fill: var(--secondary-colour);
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+    display: block;
 }
 
 
@@ -725,6 +766,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
     line-height: 1.6;
     margin: 0;
     font-family: var(--body-fonts);
+    color: var(--text-colour);
 }
 
 .left-container-arrow,

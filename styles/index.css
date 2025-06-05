@@ -22,37 +22,18 @@
     --accent-colour: #5adda2;
     --text-colour: #110e0e;
     --bg-colour: #f6f9f8;
+    --shadow-colour: rgba(76, 157, 121, 0.23);
 }
 
-/* DARK MODE COLOUR PALETTE 
-[data-theme="dark-mode"] {
-    --bg-color: #121212;
-    --text-color: #EAEAEA;
-    --secondary-text: #AAA;
-    --card-bg: #1E1E1E;
-    --timeline-line: #444;
-    --accent: #4FC3F7;
+.darkmode {
+    --primary-colour: #0e1b15;
+    --secondary-colour: #286d4e;
+    --accent-colour: #2abc7b;
+    --text-colour: #f6f9f8;
+    --bg-colour: #110e0e;
+}
 
-    --primary-colour: rgb(241, 238, 238);
-    --secondary-colour: rgb(236, 21, 21);
-    --accent-colour: rgb(31, 30, 30);
-    --text-colour: black;
-    --bg-colour: rgb(241, 238, 238);
 
-    /*
-    --primary-bg-colour: rgb(241, 238, 238);
-
-    --primary-colour: black;
-    --secondary-text-colour: #666;
-
-    --card-bg: #FFFFFF;
-    --timeline-line: #D3D3D3;
-    --accent: #007BFF;
-
-    --secondary-colour: rgb(236, 21, 21);
-
-    --nav-bg-colour: rgb(31, 30, 30);
-}*/
 
 /*
     TODO: CLEAN UP CSS FILES AND HTML FILE
@@ -203,8 +184,6 @@ nav.sticky .nav-items-right .menu-icon:hover {
     transition: 0.6s;
 }
 
-/* TODO: SORT OUT THE PORTFOLIO AND TOGGLE BUTTON */
-
 .portfolio-dropdown {
     position: relative;
 }
@@ -286,7 +265,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
   margin-left: 18px;
   cursor: pointer;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 8px rgba(76, 157, 121, 0.10);
+  box-shadow: 0 2px 8px var(--shadow-colour);
 }
 .toggle-theme:hover,
 .toggle-theme:focus {
@@ -530,8 +509,6 @@ nav.sticky .nav-items-right .menu-icon:hover {
 
 /* -------------------------- Skills ----------------------- */
 
-/* TODO: LOOK INTO SKILLS SECTION COLOURS */
-
 #skills {
     display: flex;
     flex-direction: column;
@@ -594,18 +571,18 @@ nav.sticky .nav-items-right .menu-icon:hover {
 /* TODO: CHANGE ICONS */
 
 .skill-pill {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  background: #fff;
-  color: var(--primary-colour);
-  border-radius: 12px;
-  padding: 0.7rem 1.3rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-  box-shadow: 0 2px 8px rgba(76, 157, 121, 0.10);
-  min-width: 120px;
-  transition: transform 0.18s, box-shadow 0.18s, background 0.18s, color 0.18s, border 0.18s;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: var(--bg-colour);
+    color: var(--text-colour);
+    border-radius: 12px;
+    padding: 0.7rem 1.3rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px var(--shadow-colour);
+    min-width: 120px;
+    transition: transform 0.18s, box-shadow 0.18s, background 0.18s, color 0.18s, border 0.18s;
 }
 
 .skill-pill img {
@@ -726,7 +703,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
     border-radius: 10px;
     position: relative;
     z-index: 1;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px var(--shadow-colour);
     font-family: var(--body-fonts);
     text-align: left;
 }
@@ -1058,7 +1035,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
     font-size: 1.1rem;
     text-decoration: none;
     transition: background 0.2s, color 0.2s, transform 0.2s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px var(--shadow-colour);
 }
 
 .resume-btn:hover {
@@ -1070,7 +1047,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 .chatbot-box {
     background: var(--text-colour);
     border-radius: 14px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 16px var(--shadow-colour);
     padding: 2.5rem 1.5rem;
     margin: 0 auto;
     max-width: 420px;
@@ -1170,7 +1147,7 @@ form input, form textarea {
     color: var(--text-colour);
     font-size: 18px;
     border-radius: 6px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px var(--shadow-colour);
 }
 
 .submit-form {

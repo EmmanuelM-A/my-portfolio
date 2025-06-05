@@ -258,6 +258,20 @@ nav.sticky .nav-items-right .menu-icon:hover {
     color: var(--accent-colour);
 }
 
+.dropdown-toggle .arrow {
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-dropdown-menu.show ~ .dropdown-toggle .arrow {
+    transform: rotate(180deg);
+}
+
+.portfolio-dropdown.open .arrow {
+    transform: rotate(180deg);
+}
+
 /* ----------------------------- TOGGLE BUTTON --------------------------- */
 
 .toggle-theme {

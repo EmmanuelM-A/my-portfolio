@@ -42,17 +42,20 @@ window.addEventListener("scroll", () => {
 // ------------------- PORTFOLIO DROPDOWN ---------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.querySelector(".portfolio-dropdown .dropdown-toggle");
-    const menu = document.querySelector(".portfolio-dropdown-menu");
+    const portfolioDropdown = document.querySelector(".portfolio-dropdown");
+    const toggle = portfolioDropdown.querySelector(".dropdown-toggle");
+    const menu = portfolioDropdown.querySelector(".portfolio-dropdown-menu");
 
     toggle.addEventListener("click", (e) => {
         e.stopPropagation();
         menu.classList.toggle("show");
+        portfolioDropdown.classList.toggle("open");
     });
 
     document.addEventListener("click", (e) => {
-        if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+        if (!portfolioDropdown.contains(e.target)) {
             menu.classList.remove("show");
+            portfolioDropdown.classList.remove("open");
         }
     });
 });

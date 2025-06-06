@@ -42,13 +42,11 @@
 /*
     TODO: CLEAN UP CSS FILES AND HTML FILE
     TODO: Complete chatbot
-    TODO: Work on form, contact-me mechanism
     TODO: Get icons, images and data
     TODO: Add smooth scroll and section reveal animations
     TODO: Optimize images and assets for faster loading
     TODO: Add alt text and improve accessibility (a11y)
     TODO: Add meta tags for SEO and social sharing
-    TODO: Add project filtering or search (if you have many projects)
     TODO: Add loading spinners or skeletons for async content
     TODO: Minify and bundle CSS/JS for production
     TODO: Test and fix cross-browser compatibility issues
@@ -121,6 +119,10 @@ nav.sticky {
 
 nav.sticky > .nav-logo {
     color: var(--text-colour); /* COLOUR OF TEXT ON STICKY BAR */
+}
+
+nav.sticky > .nav-logo:hover {
+    color: var(--secondary-colour);
 }
 
 nav.sticky .nav-items-right > .nav-item {
@@ -611,8 +613,6 @@ nav.sticky .nav-items-right .menu-icon:hover {
   display: flex;
 }
 
-/* TODO: CHANGE ICONS */
-
 .skill-pill {
     display: flex;
     align-items: center;
@@ -628,18 +628,22 @@ nav.sticky .nav-items-right .menu-icon:hover {
     transition: transform 0.18s, box-shadow 0.18s, background 0.18s, color 0.18s, border 0.18s;
 }
 
-.skill-pill img {
-  width: 28px;
-  height: 28px;
+/*.skill-pill img {
+    width: 28px;
+    height: 28px;
+}*/
+
+.skill-pill i {
+    color: var(--accent-colour);
 }
 
 .skill-pill .years {
-  background: var(--accent-colour);
-  color: var(--bg-colour);
-  border-radius: 8px;
-  font-size: 0.95rem;
-  padding: 0.1rem 0.7rem;
-  margin-left: auto;
+    background: var(--accent-colour);
+    color: var(--bg-colour);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    padding: 0.1rem 0.7rem;
+    margin-left: auto;
 }
 
 @media only screen and (max-width: 600px) {

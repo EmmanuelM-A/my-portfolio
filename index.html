@@ -359,16 +359,22 @@
 
                     <!-- Right: Contact Form -->
                     <div class="contact-form">
-                        <form>
+                        <form id="contactForm" action="https://formspree.io/f/xanjqean" method="POST">
                             <div class="rowOne">
-                                <input type="text" name="name" placeholder="Your name" required></input>
+                                <input type="text" id="name" name="name" placeholder="Your name">
+                                <span class="error-message" id="nameError"></span>
                             </div>
                             <div class="rowTwo">
-                                <input type="email" name="email" placeholder="Your email" required></input>
+                                <input type="email" id="email" name="email" placeholder="Your email">
+                                <span class="error-message" id="emailError"></span>
                             </div>
-                            <textarea name="message" rows="6" placeholder="Your message" required></textarea>
+                            <textarea id="message" name="message" rows="6" placeholder="Your message"></textarea>
+                            <span class="error-message" id="messageError"></span>
                             <button type="submit" class="submit-form">Submit</button>
                         </form>
+                        <div id="successMessage" class="success-message" style="display: none;">
+                            Thank you! Your message has been sent successfully.
+                        </div>
                     </div>
                 </div>
             </div>

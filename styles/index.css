@@ -11,7 +11,6 @@
     /* FONTS */
     --heading-fonts: Poppins, Arial;
     --body-fonts: Inter, sans-serif;
-    --sub-headings-font: ;
 
     --section-title-size: 3.75rem;
 
@@ -23,6 +22,11 @@
     --text-colour: #110e0e;
     --bg-colour: #f6f9f8;
     --shadow-colour: rgba(76, 157, 121, 0.23);
+
+    /* VALIDATION COLOURS */
+    --error-red: #e74c3c;
+    --warning-yellow: #f1c40f;
+    --success-green: #2ecc71;
 }
 
 .darkmode {
@@ -37,7 +41,6 @@
 
 /*
     TODO: CLEAN UP CSS FILES AND HTML FILE
-    TODO: Sort out font and colour palette
     TODO: Complete chatbot
     TODO: Work on form, contact-me mechanism
     TODO: Get icons, images and data
@@ -52,7 +55,6 @@
     TODO: Add a 404 page and error handling for broken links
     TODO: Add favicon and update browser tab title
     TODO: Write clear, concise project descriptions and about me
-    TODO: Add dark mode/light mode toggle (optional)
 */
 
 /* ---------------------- General -------------------- */
@@ -1021,6 +1023,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 #show-more-button:hover {
     color: var(--bg-colour);
     background: var(--accent-colour);
+    border-color: var(--accent-colour);
 }
 
 @media only screen and (max-width: 600px) {
@@ -1149,7 +1152,8 @@ nav.sticky .nav-items-right .menu-icon:hover {
 .contact-info p {
     margin-top: 30px;
     font-size: 1.4rem;
-    font-family: var(--body-fonts)
+    font-family: var(--body-fonts);
+    color: var(--text-colour);
 }
 .contact-info p i {
     color: var(--accent-colour);
@@ -1189,7 +1193,7 @@ form input, form textarea {
     color: var(--text-colour);
     font-size: 18px;
     border-radius: 6px;
-    box-shadow: 0 2px 10px var(--shadow-colour);
+    border: 2px solid var(--text-colour);
 }
 
 .submit-form {
@@ -1231,6 +1235,45 @@ form input, form textarea {
         margin-top: 0;
     }
 }
+
+/* --------------------------- Contact Form Validation Styles ------------------------- */
+
+form input.invalid,
+form textarea.invalid {
+    border: 2px solid var(--error-red) !important; /* Red for empty/invalid */
+}
+
+form input.warning,
+form textarea.warning {
+    border: 2px solid var(--warning-yellow) !important; /* Yellow for potential issues */
+}
+
+form input.valid,
+form textarea.valid {
+    border: 2px solid var(--success-green) !important; /* Green for valid */
+}
+
+.error-message {
+    color: var(--error-red);
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: block; /* Ensures it takes up space */
+    height: 1.2em; /* Reserve space to prevent layout shifts */
+}
+
+.success-message {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--success-green);
+    color: var(--bg-colour); /* Or a contrasting color */
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+
 
 /* --------------------------- Footer ------------------------- */
 

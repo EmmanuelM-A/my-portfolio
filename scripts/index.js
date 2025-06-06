@@ -179,3 +179,115 @@ showMoreBtn.addEventListener("click", () => {
     }
 });
 // ----------------------------------------
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageTextarea = document.getElementById('message');
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
+    const successMessageDiv = document.getElementById('successMessage');
+
+    const inputs = [
+        { element: nameInput, errorElement: nameError, type: 'text', message: 'Name cannot be empty.' },
+        { element: emailInput, errorElement: emailError, type: 'email', message: 'Please enter a valid email address.' },
+        { element: messageTextarea, errorElement: messageError, type: 'text', message: 'Message cannot be empty.' }
+    ];
+
+    // Function to set validation styles and messages
+    function setValidationStatus(inputElement, errorElement, status, message = '') {
+        inputElement.classList.remove('invalid', 'warning', 'valid');
+        errorElement.textContent = '';
+
+        if (status === 'invalid') {
+            inputElement.classList.add('invalid');
+            errorElement.textContent = message;
+        } else if (status === 'warning') {
+            inputElement.classList.add('warning');
+            errorElement.textContent = message;
+        } else if (status === 'valid') {
+            inputElement.classList.add('valid');
+        }
+    }
+
+    // Real-time validation on input/change
+    inputs.forEach(input => {
+        input.element.addEventListener('input', () => {
+            if (input.element.value.trim() === '') {
+                setValidationStatus(input.element, input.errorElement, 'invalid', input.message);
+            } else if (input.type === 'email' && !isValidEmail(input.element.value.trim())) {
+                setValidationStatus(input.element, input.errorElement, 'warning', 'Please enter a valid email format.');
+            } else {
+                setValidationStatus(input.element, input.errorElement, 'valid');
+            }
+        });
+    });
+
+    // Function to validate email format
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    // Handle form submission
+    contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault(); // Prevent default form submission
+
+        let allFieldsValid = true;
+
+        // Perform final validation on all fields
+        inputs.forEach(input => {
+            if (input.element.value.trim() === '') {
+                setValidationStatus(input.element, input.errorElement, 'invalid', input.message);
+                allFieldsValid = false;
+            } else if (input.type === 'email' && !isValidEmail(input.element.value.trim())) {
+                setValidationStatus(input.element, input.errorElement, 'warning', 'Please enter a valid email format.');
+                allFieldsValid = false;
+            } else {
+                setValidationStatus(input.element, input.errorElement, 'valid');
+            }
+        });
+
+        if (!allFieldsValid) {
+            console.log('Form has validation errors.');
+            return; // Stop submission if validation fails
+        }
+
+        // If all fields are valid, submit the form data
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Formspree submission successful
+                console.log('Form submitted successfully!');
+                successMessageDiv.style.display = 'block'; // Show success message
+                contactForm.reset(); // Clear the form
+                // Optionally, remove valid classes after a delay or immediately
+                inputs.forEach(input => {
+                    input.element.classList.remove('valid');
+                });
+                setTimeout(() => {
+                    successMessageDiv.style.display = 'none'; // Hide success message after 5 seconds
+                }, 5000);
+            } else {
+                // Formspree submission failed
+                console.error('Form submission failed:', response.statusText);
+                alert('Oops! There was a problem sending your message. Please try again later.');
+            }
+        } catch (error) {
+            console.error('Network error during form submission:', error);
+            alert('A network error occurred. Please check your internet connection and try again.');
+        }
+    });
+});

@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // ------------------- Scripts for projects section ---------------------------
-let showMoreBtn = document.querySelector('#show-more-button');
+/*let showMoreBtn = document.querySelector('#show-more-button');
 let currentItems = 3;
 
 showMoreBtn.addEventListener("click", () => {
@@ -177,7 +177,45 @@ showMoreBtn.addEventListener("click", () => {
     if(currentItems >= projectCards.length) {
         showMoreBtn.style.display = "none";
     }
+});*/
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".project-card");
+    const showMoreBtn = document.getElementById("show-more-button");
+    const showLessBtn = document.getElementById("show-less-button");
+    const batchSize = 4;
+    let currentVisible = 0;
+
+    function showNextBatch() {
+        for (let i = currentVisible; i < currentVisible + batchSize && i < cards.length; i++) {
+            cards[i].classList.add("visible");
+        }
+        currentVisible += batchSize;
+
+        if (currentVisible >= cards.length) {
+            showMoreBtn.style.display = "none";
+        }
+        showLessBtn.style.display = "inline-block";
+    }
+
+    function showLess() {
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].classList.remove("visible");
+        }
+        currentVisible = 0;
+        showNextBatch(); // show first batch again
+
+        showMoreBtn.style.display = "inline-block";
+        showLessBtn.style.display = "none";
+    }
+
+    showNextBatch(); // Initial batch on load
+
+    showMoreBtn.addEventListener("click", showNextBatch);
+    showLessBtn.addEventListener("click", showLess);
 });
+
+
 // ----------------------------------------
 
 

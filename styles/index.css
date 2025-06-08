@@ -66,7 +66,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
-    scroll-padding-top: 180px;
+    scroll-padding-top: 140px;
 }
 
 body {
@@ -882,7 +882,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 
 .display-projects {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* always 4 columns max */
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
     margin-top: 50px;
 }
@@ -901,8 +901,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 
 .project-card:nth-child(1),
 .project-card:nth-child(2),
-.project-card:nth-child(3),
-.project-card:nth-child(4) {
+.project-card:nth-child(3) {
     display: block;
 }
 .project-card img {
@@ -1062,6 +1061,19 @@ nav.sticky .nav-items-right .menu-icon:hover {
 @media (max-width: 700px) {
     .display-projects {
         grid-template-columns: 1fr;
+    }
+
+    .project-content h4 {
+        font-size: clamp(1.1rem, 2.5vw, 1.7rem);
+    }
+    .tech-stack span {
+        font-size: clamp(0.85rem, 1.5vw, 1.15rem);
+        padding: 0.35rem 1rem;
+    }
+    .project-content .inline a {
+        font-size: 1.5rem;
+        width: 52px;
+        height: 52px;
     }
 }
 

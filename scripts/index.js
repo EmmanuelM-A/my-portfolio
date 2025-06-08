@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll(".project-card");
     const showMoreBtn = document.getElementById("show-more-button");
     const showLessBtn = document.getElementById("show-less-button");
-    const batchSize = 4;
+    const batchSize = 3;
     let currentVisible = 0;
 
     function showNextBatch() {

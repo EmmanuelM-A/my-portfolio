@@ -41,17 +41,12 @@
 
 /*
     TODO: CLEAN UP CSS FILES AND HTML FILE
-    TODO: Complete chatbot
     TODO: Get icons, images and data
     TODO: Add smooth scroll and section reveal animations
     TODO: Optimize images and assets for faster loading
     TODO: Add alt text and improve accessibility (a11y)
     TODO: Add meta tags for SEO and social sharing
-    TODO: Add loading spinners or skeletons for async content
     TODO: Minify and bundle CSS/JS for production
-    TODO: Test and fix cross-browser compatibility issues
-    TODO: Add a 404 page and error handling for broken links
-    TODO: Add favicon and update browser tab title
     TODO: Write clear, concise project descriptions and about me
 */
 
@@ -90,9 +85,9 @@ body {
 header {
     width: 100%;
     height: 100vh;
-    /*background-image: url(../assets/images/insert-photo.png);
+    /*background-image: url(../assets/images/photo-of-me.jpg);
     background-size: cover;
-    background-position: center;*/
+    background-position: right;*/
 }
 
 
@@ -639,7 +634,7 @@ nav.sticky .nav-items-right .menu-icon:hover {
 
 .skill-pill .years {
     background: var(--accent-colour);
-    color: var(--bg-colour);
+    color: var(--text-colour);
     border-radius: 8px;
     font-size: 0.95rem;
     padding: 0.1rem 0.7rem;
@@ -892,6 +887,12 @@ nav.sticky .nav-items-right .menu-icon:hover {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    /*width: 500px;
+    height: 500px;*/
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Maintains square shape */
+    max-width: 500px;     /* Optional: Prevents it from growing too wide */
+    height: auto;
     color: var(--bg-colour);
 }
 
@@ -908,6 +909,10 @@ nav.sticky .nav-items-right .menu-icon:hover {
     width: 100%;
     display: block;
     border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     transition: transform 0.5s;
 }
 
@@ -1046,23 +1051,21 @@ nav.sticky .nav-items-right .menu-icon:hover {
     border-color: var(--accent-colour);
 }
 
-@media (max-width: 1200px) {
-    .display-projects {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1400px) {
     .display-projects {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     .display-projects {
         grid-template-columns: 1fr;
-    }
 
+    }
+    .project-card {
+        aspect-ratio: 4 / 3; /* Slightly wider for phones */
+        max-width: 100%;
+    }
     .project-content h4 {
         font-size: clamp(1.1rem, 2.5vw, 1.7rem);
     }

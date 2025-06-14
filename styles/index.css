@@ -42,12 +42,9 @@
 /*
     TODO: CLEAN UP CSS FILES AND HTML FILE
     TODO: Get icons, images and data
-    TODO: Add smooth scroll and section reveal animations
     TODO: Optimize images and assets for faster loading
     TODO: Add alt text and improve accessibility (a11y)
     TODO: Add meta tags for SEO and social sharing
-    TODO: Minify and bundle CSS/JS for production
-    TODO: Write clear, concise project descriptions and about me
 */
 
 /* ---------------------- General -------------------- */
@@ -66,7 +63,7 @@ html {
 
 body {
     background: var(--bg-colour);
-    /*font-family: var(--body-fonts);*/
+    font-family: var(--body-fonts);
     position: relative;
 }
 
